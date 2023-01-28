@@ -14,5 +14,12 @@
         "32": "images/football-32x32.png",
         "192": "images/football-192x192.png",
         "512": "images/football-512x512.png"
+      },
+      "browser_specific_settings": {
+        "gecko": {
+          "id": "gdmapextension",
+          "strict_min_version": "109.0"
+        }
       }
+      
   }

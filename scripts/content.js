@@ -1,4 +1,4 @@
-
+const parser = new DOMParser();
 const schools = get_school_data();
 const active_school_id = document.getElementById('pagetid')['value'];
 const world = schools[active_school_id]['world']
@@ -14,7 +14,9 @@ try {
       console.log(cell);
       var map_url_full = map_url_prefix + cell;
       console.log(map_url_full);
-      t.rows[r].cells[7].innerHTML = `<a href="${map_url_full}" target="_blank">+${cell}</a>`;
+      t.rows[r].cells[7].innerHTML = '';
+      const html_to_insert = parser.parseFromString(`<a href="${map_url_full}" target="_blank">+${cell}</a>`, "text/html");
+      t.rows[r].cells[7].appendChild(html_to_insert);
       console.log(t.rows[r].cells[7].innerHTML);
     }
   }
