@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "City Mapper for WIS Gridiron Dynasty",
+    "version": "0.0.0.1",
+    "description": "Add links to City, ST on Recruiting search page that will open map location within GDAnalyst",
+    "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": ["https://www.whatifsports.com/gd/recruiting/Search.aspx"]
+        }
+      ],
+    "icons": {
+        "16": "images/football-16x16.png",
+        "32": "images/football-32x32.png",
+        "192": "images/football-192x192.png",
+        "512": "images/football-512x512.png"
+      }
+  }
