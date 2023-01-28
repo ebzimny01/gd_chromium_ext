@@ -7,7 +7,7 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 ## How To Use
 I am currently waiting on the Chrome Extension to be approved and published. In the meantime, here are instructions on how to load the unpacked extension manually.
 
-1. Download the .zip file from the repository
+1. [Download the .zip file](https://github.com/ebzimny01/gd_chromium_ext/blob/master/gd_chromium_ext.zip) from the repository
 2. Unzip the downloaded file to a folder location of your choice
 3. Open a Chromium-based browser - e.g. Chrome or Edge
 4. Enter "chrome://extensions" in the address bar and hit "ENTER" key (or "edge://extensions" if using Edge browser)
