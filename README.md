@@ -19,6 +19,9 @@ I am currently waiting on the Chrome Extension to be approved and published. In 
 10. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division
 
 ## Release Notes
+### v0.0.0.5
+1. Ok, this time I really fixed the issue where URLs were not working correctly for certain schools. (pretty sure at least)
+
 ### v0.0.0.4
 1. Fixed issue where the URLs were not working correctly for certain schools.
 
