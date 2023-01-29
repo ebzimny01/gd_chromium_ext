@@ -8,31 +8,36 @@ const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResu
 try {
   const table_section = section.getElementsByTagName('tbody');
   var t = table_section[0];
+  var homtetown_exists = false;
   var h = 0;
   // establishes the column number for 'Hometown' by searching 1st row
   for (var c = 0; c < t.rows[0].cells.length; c++) {
     if (t.rows[0].cells[c].textContent==="Hometown") {
       h = c; 
       console.log(`Hometown is column number ${h}`);
+      homtetown_exists = true;
     } else {
       console.log('Could not find Hometown column number.');
     }
   }
-  // Parses all rows of recruit search table and adds GD link to hometown
-
-  for (var r = 1; r < t.rows.length; r++) {
-    var cell = t.rows[r].cells[h].innerHTML;
-    if (cell!="Hometown"){ // Skips over the table header rows
-      // console.log(cell);
-      var map_url_full = map_url_prefix + cell;
-      // console.log(map_url_full);
-      t.rows[r].cells[h].innerHTML = '';
-      var html_to_insert = parser.parseFromString(`<a href="${map_url_full}" target="_blank">+${cell}</a>`, "text/html");
-      t.rows[r].cells[h].appendChild(html_to_insert.documentElement);
-      // console.log(t.rows[r].cells[h].innerHTML);
+  if (homtetown_exists){
+    // Parses all rows of recruit search table and adds GD link to hometown
+    for (var r = 1; r < t.rows.length; r++) {
+      var cell = t.rows[r].cells[h].innerHTML;
+      if (cell!="Hometown"){ // Skips over the table header rows
+        // console.log(cell);
+        var map_url_full = map_url_prefix + cell;
+        // console.log(map_url_full);
+        t.rows[r].cells[h].innerHTML = '';
+        var html_to_insert = parser.parseFromString(`<a href="${map_url_full}" target="_blank">+${cell}</a>`, "text/html");
+        t.rows[r].cells[h].appendChild(html_to_insert.documentElement);
+        // console.log(t.rows[r].cells[h].innerHTML);
+      }
     }
+    console.log('Updated Hometowns with URL links.')
+  } else {
+    console.log('Hometown column does not exist.')
   }
-  console.log('Updated Hometowns with URL links.')
 } catch (err) {
   console.log(err);
   console.log("Recruiting search page is empty so unable to add map URLs.")
