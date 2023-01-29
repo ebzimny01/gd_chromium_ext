@@ -17,3 +17,11 @@ I am currently waiting on the Chrome Extension to be approved and published. In 
 8. Do a Recruit Search on WIS GD
 9. The recruits' hometowns should be modified with a + sign in front and have a hyperlink
 10. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division
+
+## Release Notes
+### v0.0.0.3
+1. Resolved bug when changing Recruit Search to use the Raitings View where there is no Hometown column.
+
+### v0.0.0.2
+1. Updated manifest file to support Firefox v109 or newer. Note: Extension is pending approval by Mozilla.
+2. Resolved a bug where the Hometown column was not getting selected correctly, which was resulting in incorrectly updating the page content/URLs.
