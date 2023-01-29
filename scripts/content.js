@@ -1,4 +1,4 @@
-
+const parser = new DOMParser();
 const schools = get_school_data();
 const active_school_id = document.getElementById('pagetid')['value'];
 const world = schools[active_school_id]['world']
@@ -8,17 +8,33 @@ const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResu
 try {
   const table_section = section.getElementsByTagName('tbody');
   var t = table_section[0];
-  for (var r = 0; r < t.rows.length; r++) {
-    var cell = t.rows[r].cells[7].innerHTML;
-    if (cell!="Hometown"){
-      console.log(cell);
-      var map_url_full = map_url_prefix + cell;
-      console.log(map_url_full);
-      t.rows[r].cells[7].innerHTML = `<a href="${map_url_full}" target="_blank">+${cell}</a>`;
-      console.log(t.rows[r].cells[7].innerHTML);
+  var h = 0;
+  // establishes the column number for 'Hometown' by searching 1st row
+  for (var c = 0; c < t.rows[0].cells.length; c++) {
+    if (t.rows[0].cells[c].textContent==="Hometown") {
+      h = c; 
+      console.log(`Hometown is column number ${h}`);
+    } else {
+      console.log('Could not find Hometown column number.');
     }
   }
+  // Parses all rows of recruit search table and adds GD link to hometown
+
+  for (var r = 1; r < t.rows.length; r++) {
+    var cell = t.rows[r].cells[h].innerHTML;
+    if (cell!="Hometown"){ // Skips over the table header rows
+      // console.log(cell);
+      var map_url_full = map_url_prefix + cell;
+      // console.log(map_url_full);
+      t.rows[r].cells[h].innerHTML = '';
+      var html_to_insert = parser.parseFromString(`<a href="${map_url_full}" target="_blank">+${cell}</a>`, "text/html");
+      t.rows[r].cells[h].appendChild(html_to_insert.documentElement);
+      // console.log(t.rows[r].cells[h].innerHTML);
+    }
+  }
+  console.log('Updated Hometowns with URL links.')
 } catch (err) {
+  console.log(err);
   console.log("Recruiting search page is empty so unable to add map URLs.")
 }
 
