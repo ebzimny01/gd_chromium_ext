@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "City Mapper for WIS Gridiron Dynasty",
-    "version": "0.0.0.3",
+    "version": "0.0.0.4",
     "description": "Add links to City, ST on Recruiting search page that will open map location within GDAnalyst",
     "browser_specific_settings": {
       "gecko": {

@@ -29,7 +29,7 @@ try {
         var map_url_full = map_url_prefix + cell;
         // console.log(map_url_full);
         t.rows[r].cells[h].innerHTML = '';
-        var html_to_insert = parser.parseFromString(`<a href="${map_url_full}" target="_blank">+${cell}</a>`, "text/html");
+        var html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
         t.rows[r].cells[h].appendChild(html_to_insert.documentElement);
         // console.log(t.rows[r].cells[h].innerHTML);
       }
@@ -394,8 +394,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49004": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "rockne"
     },
@@ -514,8 +514,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49104": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "rockne"
     },
@@ -628,8 +628,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49330": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "rockne"
     },
@@ -754,8 +754,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49560": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "rockne"
     },
@@ -1018,8 +1018,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49360": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "rockne"
     },
@@ -1504,8 +1504,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49499": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "rockne"
     },
@@ -2254,8 +2254,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49502": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "rockne"
     },
@@ -2326,20 +2326,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49442": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "rockne"
     },
     "49103": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "rockne"
     },
     "49162": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "rockne"
     },
@@ -2368,8 +2368,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "48983": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "rockne"
     },
@@ -2386,8 +2386,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49093": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "rockne"
     },
@@ -2440,14 +2440,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49007": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "rockne"
     },
     "49070": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "rockne"
     },
@@ -2464,26 +2464,26 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49279": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "rockne"
     },
     "49281": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "rockne"
     },
     "49283": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "rockne"
     },
     "49152": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "rockne"
     },
@@ -2494,8 +2494,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "48971": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "rockne"
     },
@@ -2506,14 +2506,14 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49165": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "rockne"
     },
     "49083": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "rockne"
     },
@@ -2554,8 +2554,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49504": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "rockne"
     },
@@ -2644,8 +2644,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "48966": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "rockne"
     },
@@ -2668,8 +2668,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49351": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "rockne"
     },
@@ -2722,8 +2722,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49437": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "rockne"
     },
@@ -2764,20 +2764,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49280": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "rockne"
     },
     "49285": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "rockne"
     },
     "49286": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "rockne"
     },
@@ -2992,8 +2992,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49199": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "rockne"
     },
@@ -3004,8 +3004,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "48975": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "rockne"
     },
@@ -3088,8 +3088,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49284": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "rockne"
     },
@@ -3100,8 +3100,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49356": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "rockne"
     },
@@ -3118,8 +3118,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "48984": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "rockne"
     },
@@ -3148,14 +3148,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "48978": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "rockne"
     },
     "49163": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "rockne"
     },
@@ -3166,8 +3166,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49261": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "rockne"
     },
@@ -3562,8 +3562,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49616": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "camp"
     },
@@ -3718,8 +3718,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50172": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "camp"
     },
@@ -3736,8 +3736,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49716": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "camp"
     },
@@ -3952,8 +3952,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49942": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "camp"
     },
@@ -5074,8 +5074,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50111": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "camp"
     },
@@ -5356,8 +5356,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49710": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "camp"
     },
@@ -5530,8 +5530,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49694": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "camp"
     },
@@ -5614,8 +5614,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49622": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "camp"
     },
@@ -5644,8 +5644,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49682": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "camp"
     },
@@ -5728,8 +5728,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50116": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "camp"
     },
@@ -5776,14 +5776,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50054": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "camp"
     },
     "50049": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "camp"
     },
@@ -5848,8 +5848,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49783": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "camp"
     },
@@ -5908,8 +5908,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49775": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "camp"
     },
@@ -5992,8 +5992,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49715": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "camp"
     },
@@ -6010,14 +6010,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49596": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "camp"
     },
     "50114": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "camp"
     },
@@ -6034,14 +6034,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "50113": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "camp"
     },
     "49705": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "camp"
     },
@@ -6076,8 +6076,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49873": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "camp"
     },
@@ -6094,32 +6094,32 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49892": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "camp"
     },
     "49893": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "camp"
     },
     "49894": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "camp"
     },
     "49895": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "camp"
     },
     "49898": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "camp"
     },
@@ -6238,8 +6238,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49777": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "camp"
     },
@@ -6280,14 +6280,14 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49963": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "camp"
     },
     "49774": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "camp"
     },
@@ -6322,8 +6322,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49764": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "camp"
     },
@@ -6340,8 +6340,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49769": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "camp"
     },
@@ -6358,8 +6358,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49897": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "camp"
     },
@@ -6406,8 +6406,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49891": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "camp"
     },
@@ -6430,8 +6430,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49968": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "camp"
     },
@@ -6442,8 +6442,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49967": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "camp"
     },
@@ -6478,14 +6478,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "49896": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "camp"
     },
     "49587": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "camp"
     },
@@ -7108,8 +7108,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50784": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "bryant"
     },
@@ -7288,8 +7288,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50228": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "bryant"
     },
@@ -7570,8 +7570,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50554": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "bryant"
     },
@@ -7648,8 +7648,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50670": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "bryant"
     },
@@ -8014,8 +8014,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50723": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "bryant"
     },
@@ -8062,8 +8062,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50322": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "bryant"
     },
@@ -8728,8 +8728,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50207": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "bryant"
     },
@@ -8740,20 +8740,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50294": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "bryant"
     },
     "50728": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "bryant"
     },
     "50190": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "bryant"
     },
@@ -9004,8 +9004,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50726": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "bryant"
     },
@@ -9076,20 +9076,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50423": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "bryant"
     },
     "50666": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "bryant"
     },
     "50661": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "bryant"
     },
@@ -9100,14 +9100,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50386": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "bryant"
     },
     "50231": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "bryant"
     },
@@ -9124,14 +9124,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "50725": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "bryant"
     },
     "50317": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "bryant"
     },
@@ -9196,8 +9196,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50575": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "bryant"
     },
@@ -9226,8 +9226,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50202": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "bryant"
     },
@@ -9256,8 +9256,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50208": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "bryant"
     },
@@ -9268,8 +9268,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50306": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "bryant"
     },
@@ -9310,8 +9310,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50395": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "bryant"
     },
@@ -9322,8 +9322,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50327": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "bryant"
     },
@@ -9340,8 +9340,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50387": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "bryant"
     },
@@ -9424,14 +9424,14 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50579": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "bryant"
     },
     "50307": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "bryant"
     },
@@ -9460,14 +9460,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50506": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "bryant"
     },
     "50510": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "bryant"
     },
@@ -9574,8 +9574,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50505": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "bryant"
     },
@@ -9592,8 +9592,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50504": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "bryant"
     },
@@ -9700,8 +9700,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50485": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "bryant"
     },
@@ -9736,8 +9736,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50376": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "bryant"
     },
@@ -9790,14 +9790,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "50509": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "bryant"
     },
     "50381": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "bryant"
     },
@@ -9832,8 +9832,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50503": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "bryant"
     },
@@ -10096,8 +10096,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50507": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "bryant"
     },
@@ -10408,8 +10408,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "51396": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "wilkinson"
     },
@@ -10498,8 +10498,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51166": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "wilkinson"
     },
@@ -10744,8 +10744,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50940": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "wilkinson"
     },
@@ -10846,8 +10846,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51196": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "wilkinson"
     },
@@ -11332,8 +11332,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51335": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "wilkinson"
     },
@@ -11722,8 +11722,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51338": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "wilkinson"
     },
@@ -11986,9 +11986,9 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51175": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "51219": {
@@ -12094,8 +12094,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51007": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "wilkinson"
     },
@@ -12148,14 +12148,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50906": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "wilkinson"
     },
     "51340": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "wilkinson"
     },
@@ -12178,8 +12178,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50919": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "wilkinson"
     },
@@ -12214,14 +12214,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "51035": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "wilkinson"
     },
     "50929": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "wilkinson"
     },
@@ -12238,14 +12238,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "51187": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "wilkinson"
     },
     "51337": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "wilkinson"
     },
@@ -12328,8 +12328,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50918": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "wilkinson"
     },
@@ -12346,8 +12346,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50802": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "wilkinson"
     },
@@ -12412,8 +12412,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50846": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "wilkinson"
     },
@@ -12466,8 +12466,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51278": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "wilkinson"
     },
@@ -12478,8 +12478,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50998": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "wilkinson"
     },
@@ -12538,8 +12538,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51097": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "wilkinson"
     },
@@ -12550,20 +12550,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51116": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "wilkinson"
     },
     "51119": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "wilkinson"
     },
     "51122": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "wilkinson"
     },
@@ -12610,8 +12610,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51115": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "wilkinson"
     },
@@ -12634,8 +12634,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50814": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "wilkinson"
     },
@@ -12658,8 +12658,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50993": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "wilkinson"
     },
@@ -12712,8 +12712,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50999": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "wilkinson"
     },
@@ -12742,14 +12742,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "50843": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "wilkinson"
     },
     "51273": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "wilkinson"
     },
@@ -12778,8 +12778,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50811": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "wilkinson"
     },
@@ -12790,8 +12790,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51001": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "wilkinson"
     },
@@ -12808,14 +12808,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "50939": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "wilkinson"
     },
     "51118": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "wilkinson"
     },
@@ -12826,8 +12826,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51191": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "wilkinson"
     },
@@ -13048,8 +13048,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51120": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "wilkinson"
     },
@@ -13492,8 +13492,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51452": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "leahy"
     },
@@ -13654,8 +13654,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51552": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "leahy"
     },
@@ -13786,8 +13786,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51778": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "leahy"
     },
@@ -13864,8 +13864,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52008": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "leahy"
     },
@@ -14224,8 +14224,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51808": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "leahy"
     },
@@ -14488,8 +14488,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51947": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "leahy"
     },
@@ -14782,8 +14782,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51546": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "leahy"
     },
@@ -15382,14 +15382,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51518": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "leahy"
     },
     "51952": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "leahy"
     },
@@ -15436,8 +15436,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51419": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "leahy"
     },
@@ -15496,8 +15496,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51950": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "leahy"
     },
@@ -15550,9 +15550,9 @@ function get_school_data() {
       "division": "D-III"
     },
     "51787": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "51817": {
@@ -15580,8 +15580,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51619": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "leahy"
     },
@@ -15598,8 +15598,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51458": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "leahy"
     },
@@ -15622,8 +15622,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51890": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "leahy"
     },
@@ -15634,8 +15634,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51611": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "leahy"
     },
@@ -15688,8 +15688,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51426": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "leahy"
     },
@@ -15712,8 +15712,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51949": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "leahy"
     },
@@ -15736,8 +15736,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51728": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "leahy"
     },
@@ -15748,20 +15748,20 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "51730": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "leahy"
     },
     "51731": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "leahy"
     },
     "51734": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "leahy"
     },
@@ -15826,8 +15826,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51530": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "leahy"
     },
@@ -15844,8 +15844,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51647": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "leahy"
     },
@@ -15862,8 +15862,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51610": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "leahy"
     },
@@ -15880,8 +15880,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51799": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "leahy"
     },
@@ -15910,14 +15910,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51531": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "leahy"
     },
     "51732": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "leahy"
     },
@@ -16006,14 +16006,14 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "51885": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "leahy"
     },
     "51541": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "leahy"
     },
@@ -16036,8 +16036,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51709": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "leahy"
     },
@@ -16246,8 +16246,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51733": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "leahy"
     },
@@ -16264,8 +16264,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51727": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "leahy"
     },
@@ -16300,14 +16300,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51729": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "leahy"
     },
     "51551": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "leahy"
     },
@@ -17062,8 +17062,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52368": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "stagg"
     },
@@ -17122,8 +17122,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52598": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "stagg"
     },
@@ -17308,8 +17308,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52064": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "stagg"
     },
@@ -17440,8 +17440,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52398": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "stagg"
     },
@@ -17806,8 +17806,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52537": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "stagg"
     },
@@ -18124,8 +18124,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52158": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "stagg"
     },
@@ -18370,8 +18370,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52540": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "stagg"
     },
@@ -18526,8 +18526,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52031": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "stagg"
     },
@@ -18550,8 +18550,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52231": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "stagg"
     },
@@ -18580,9 +18580,9 @@ function get_school_data() {
       "division": "D-III"
     },
     "52377": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "52552": {
@@ -18616,8 +18616,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52542": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "stagg"
     },
@@ -18754,8 +18754,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52130": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "stagg"
     },
@@ -18832,8 +18832,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52038": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "stagg"
     },
@@ -18856,8 +18856,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52480": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "stagg"
     },
@@ -18868,8 +18868,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52163": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "stagg"
     },
@@ -18886,14 +18886,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "52067": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "stagg"
     },
     "52475": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "stagg"
     },
@@ -18910,8 +18910,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52217": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "stagg"
     },
@@ -18934,8 +18934,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52070": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "stagg"
     },
@@ -18958,8 +18958,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52259": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "stagg"
     },
@@ -18988,8 +18988,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52142": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "stagg"
     },
@@ -19018,8 +19018,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52044": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "stagg"
     },
@@ -19060,8 +19060,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52153": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "stagg"
     },
@@ -19078,14 +19078,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "52026": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "stagg"
     },
     "52222": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "stagg"
     },
@@ -19198,8 +19198,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52389": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "stagg"
     },
@@ -19210,26 +19210,26 @@ function get_school_data() {
       "division": "D-II"
     },
     "52320": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "stagg"
     },
     "52321": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "stagg"
     },
     "52324": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "stagg"
     },
     "52317": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "stagg"
     },
@@ -19318,8 +19318,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52625": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "stagg"
     },
@@ -19360,8 +19360,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52319": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "stagg"
     },
@@ -19414,8 +19414,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52393": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "stagg"
     },
@@ -19510,8 +19510,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52223": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "stagg"
     },
@@ -19786,8 +19786,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52318": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "stagg"
     },
@@ -19924,8 +19924,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52323": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "stagg"
     },
@@ -20080,8 +20080,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52749": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "warner"
     },
@@ -20404,8 +20404,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53095": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "warner"
     },
@@ -20494,8 +20494,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53115": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "warner"
     },
@@ -20704,8 +20704,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52848": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "warner"
     },
@@ -21118,8 +21118,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52720": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "warner"
     },
@@ -21928,8 +21928,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53004": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "warner"
     },
@@ -21946,20 +21946,20 @@ function get_school_data() {
       "division": "D-III"
     },
     "52991": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "warner"
     },
     "52698": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "warner"
     },
     "52879": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "warner"
     },
@@ -22030,8 +22030,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52903": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "warner"
     },
@@ -22042,8 +22042,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52884": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "warner"
     },
@@ -22096,8 +22096,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52839": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "warner"
     },
@@ -22108,8 +22108,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52639": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "warner"
     },
@@ -22144,8 +22144,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52640": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "warner"
     },
@@ -22180,26 +22180,26 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52669": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "warner"
     },
     "53129": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "warner"
     },
     "52843": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "warner"
     },
     "53014": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "warner"
     },
@@ -22222,8 +22222,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52806": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "warner"
     },
@@ -22240,8 +22240,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52634": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "warner"
     },
@@ -22252,8 +22252,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52811": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "warner"
     },
@@ -22390,8 +22390,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53233": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "warner"
     },
@@ -22414,32 +22414,32 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52748": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "warner"
     },
     "52816": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "warner"
     },
     "52819": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "warner"
     },
     "53003": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "warner"
     },
     "52746": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "warner"
     },
@@ -22462,8 +22462,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53234": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "warner"
     },
@@ -22480,8 +22480,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52817": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "warner"
     },
@@ -22510,8 +22510,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52825": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "warner"
     },
@@ -22696,8 +22696,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53239": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "warner"
     },
@@ -22738,8 +22738,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53240": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "warner"
     },
@@ -22906,8 +22906,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52844": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "warner"
     },
@@ -23104,8 +23104,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53235": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "warner"
     },
@@ -23206,8 +23206,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53361": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "heisman"
     },
@@ -23380,8 +23380,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53727": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "heisman"
     },
@@ -23656,8 +23656,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53707": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "heisman"
     },
@@ -23884,8 +23884,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53504": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "heisman"
     },
@@ -23902,8 +23902,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53272": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "heisman"
     },
@@ -24688,8 +24688,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53460": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "heisman"
     },
@@ -24916,8 +24916,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53308": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "heisman"
     },
@@ -25012,8 +25012,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53616": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "heisman"
     },
@@ -25060,20 +25060,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53251": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "heisman"
     },
     "53252": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "heisman"
     },
     "53310": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "heisman"
     },
@@ -25264,8 +25264,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53603": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "heisman"
     },
@@ -25300,8 +25300,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53515": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "heisman"
     },
@@ -25366,14 +25366,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53281": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "heisman"
     },
     "53360": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "heisman"
     },
@@ -25402,8 +25402,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53500": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "heisman"
     },
@@ -25414,8 +25414,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53848": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "heisman"
     },
@@ -25432,8 +25432,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53851": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "heisman"
     },
@@ -25480,8 +25480,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53429": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "heisman"
     },
@@ -25498,8 +25498,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53431": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "heisman"
     },
@@ -25576,8 +25576,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53423": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "heisman"
     },
@@ -25618,20 +25618,20 @@ function get_school_data() {
       "division": "D-III"
     },
     "53741": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "heisman"
     },
     "53455": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "heisman"
     },
     "53456": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "heisman"
     },
@@ -25648,8 +25648,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53626": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "heisman"
     },
@@ -25666,8 +25666,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53846": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "heisman"
     },
@@ -25690,8 +25690,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53451": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "heisman"
     },
@@ -25858,14 +25858,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "53849": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "heisman"
     },
     "53852": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "heisman"
     },
@@ -25900,8 +25900,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53847": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "heisman"
     },
@@ -25948,8 +25948,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53275": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "heisman"
     },
@@ -25972,8 +25972,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53850": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "heisman"
     },
@@ -25984,8 +25984,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53286": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "heisman"
     },
@@ -25996,8 +25996,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53418": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "heisman"
     },
@@ -26008,8 +26008,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53428": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "heisman"
     },
@@ -26038,8 +26038,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53615": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "heisman"
     },
@@ -26482,8 +26482,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53827": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "heisman"
     },
@@ -26596,8 +26596,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54339": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "dobie"
     },
@@ -26608,8 +26608,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53984": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "dobie"
     },
@@ -26860,8 +26860,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54073": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "dobie"
     },
@@ -26986,8 +26986,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54091": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "dobie"
     },
@@ -27034,8 +27034,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54319": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "dobie"
     },
@@ -27112,8 +27112,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53868": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "dobie"
     },
@@ -27532,8 +27532,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53979": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "dobie"
     },
@@ -28246,8 +28246,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54226": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "dobie"
     },
@@ -28318,9 +28318,9 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54051": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "53971": {
@@ -28450,14 +28450,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54198": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "dobie"
     },
     "54163": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "dobie"
     },
@@ -28492,8 +28492,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53859": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "dobie"
     },
@@ -28534,26 +28534,26 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54035": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "dobie"
     },
     "54082": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "dobie"
     },
     "54353": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "dobie"
     },
     "53981": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "dobie"
     },
@@ -28624,8 +28624,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54043": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "dobie"
     },
@@ -28648,8 +28648,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54087": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "dobie"
     },
@@ -28696,8 +28696,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54211": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "dobie"
     },
@@ -28720,8 +28720,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54102": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "dobie"
     },
@@ -28750,8 +28750,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53917": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "dobie"
     },
@@ -28762,8 +28762,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53916": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "dobie"
     },
@@ -28822,8 +28822,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54076": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "dobie"
     },
@@ -28894,20 +28894,20 @@ function get_school_data() {
       "division": "D-II"
     },
     "54458": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "dobie"
     },
     "54460": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "dobie"
     },
     "54464": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "dobie"
     },
@@ -28936,14 +28936,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54457": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "dobie"
     },
     "54463": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "dobie"
     },
@@ -29014,8 +29014,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53983": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "dobie"
     },
@@ -29056,8 +29056,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53863": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "dobie"
     },
@@ -29068,20 +29068,20 @@ function get_school_data() {
       "division": "D-III"
     },
     "54030": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "dobie"
     },
     "53908": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "dobie"
     },
     "54221": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "dobie"
     },
@@ -29092,8 +29092,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54461": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "dobie"
     },
@@ -29104,8 +29104,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53904": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "dobie"
     },
@@ -29122,8 +29122,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54049": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "dobie"
     },
@@ -29140,8 +29140,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54439": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "dobie"
     },
@@ -29152,8 +29152,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54041": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "dobie"
     },
@@ -29170,8 +29170,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54462": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "dobie"
     },
@@ -29182,8 +29182,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53911": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "dobie"
     },
@@ -29860,8 +29860,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54951": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "hayes"
     },
@@ -29884,8 +29884,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54596": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "hayes"
     },
@@ -30052,8 +30052,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54685": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "hayes"
     },
@@ -30220,8 +30220,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54931": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "hayes"
     },
@@ -30556,8 +30556,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54703": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "hayes"
     },
@@ -30718,8 +30718,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54480": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "hayes"
     },
@@ -31012,8 +31012,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54591": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "hayes"
     },
@@ -31624,8 +31624,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54822": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "hayes"
     },
@@ -31726,8 +31726,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54823": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "hayes"
     },
@@ -31768,8 +31768,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54569": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "hayes"
     },
@@ -31786,14 +31786,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "54810": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "hayes"
     },
     "54775": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "hayes"
     },
@@ -31840,8 +31840,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54529": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "hayes"
     },
@@ -31882,9 +31882,9 @@ function get_school_data() {
       "division": "D-III"
     },
     "54663": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "55062": {
@@ -31912,8 +31912,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54661": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "hayes"
     },
@@ -31960,8 +31960,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54699": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "hayes"
     },
@@ -31972,14 +31972,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "54647": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "hayes"
     },
     "54965": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "hayes"
     },
@@ -32002,14 +32002,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54653": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "hayes"
     },
     "54833": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "hayes"
     },
@@ -32038,14 +32038,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54595": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "hayes"
     },
     "54688": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "hayes"
     },
@@ -32080,14 +32080,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54528": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "hayes"
     },
     "54593": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "hayes"
     },
@@ -32098,8 +32098,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54714": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "hayes"
     },
@@ -32122,8 +32122,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54694": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "hayes"
     },
@@ -32158,8 +32158,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54523": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "hayes"
     },
@@ -32218,32 +32218,32 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55069": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "hayes"
     },
     "55070": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "hayes"
     },
     "55072": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "hayes"
     },
     "55073": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "hayes"
     },
     "55076": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "hayes"
     },
@@ -32278,14 +32278,14 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54511": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "hayes"
     },
     "54471": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "hayes"
     },
@@ -32296,8 +32296,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54520": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "hayes"
     },
@@ -32320,8 +32320,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "54655": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "hayes"
     },
@@ -32344,8 +32344,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54516": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "hayes"
     },
@@ -32368,8 +32368,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55074": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "hayes"
     },
@@ -32434,8 +32434,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55075": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "hayes"
     },
@@ -32710,8 +32710,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55051": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "hayes"
     },
@@ -32812,8 +32812,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50234": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "bryant"
     },
@@ -32860,8 +32860,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49578": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "camp"
     },
@@ -32962,8 +32962,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52043": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "stagg"
     },
@@ -32974,8 +32974,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51121": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "wilkinson"
     },
@@ -33010,8 +33010,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50328": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "bryant"
     },
@@ -33028,8 +33028,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50508": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "bryant"
     },
@@ -33076,14 +33076,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51613": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "leahy"
     },
     "50819": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "wilkinson"
     },
@@ -33118,8 +33118,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49098": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "rockne"
     },
@@ -33130,8 +33130,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51282": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "wilkinson"
     },
@@ -33172,8 +33172,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52888": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "warner"
     },
@@ -33214,8 +33214,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50389": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "bryant"
     },
@@ -33262,8 +33262,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53236": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "warner"
     },
@@ -33322,8 +33322,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51423": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "leahy"
     },
@@ -33448,8 +33448,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52035": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "stagg"
     },
@@ -33544,8 +33544,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51431": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "leahy"
     },
@@ -33580,9 +33580,9 @@ function get_school_data() {
       "division": "D-II"
     },
     "50563": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "54626": {
@@ -33604,8 +33604,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54838": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "hayes"
     },
@@ -33652,8 +33652,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52674": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "warner"
     },
@@ -33730,8 +33730,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51605": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "leahy"
     },
@@ -33850,8 +33850,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55297": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "yost"
     },
@@ -33964,8 +33964,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54459": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "dobie"
     },
@@ -34030,8 +34030,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54642": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "hayes"
     },
@@ -34054,9 +34054,9 @@ function get_school_data() {
       "division": "D-II"
     },
     "53439": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "53753": {
@@ -34090,8 +34090,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "54040": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "dobie"
     },
@@ -34114,8 +34114,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55563": {
-      "school_long": "\"Concordia College",
-      "school_short": " Moorhead\"",
+      "school_long": "Concordia College",
+      "school_short": "Moorhead",
       "world": "Concordia",
       "division": "yost"
     },
@@ -34174,8 +34174,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55208": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "yost"
     },
@@ -34294,8 +34294,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55543": {
-      "school_long": "\"Fairleigh Dickinson University",
-      "school_short": " Madison\"",
+      "school_long": "Fairleigh Dickinson University",
+      "school_short": "Madison",
       "world": "Fairleigh Dickinson",
       "division": "yost"
     },
@@ -34468,8 +34468,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55315": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "yost"
     },
@@ -34678,8 +34678,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55092": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "yost"
     },
@@ -35104,8 +35104,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55203": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "yost"
     },
@@ -35446,8 +35446,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55450": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "yost"
     },
@@ -35740,9 +35740,9 @@ function get_school_data() {
       "division": "D-III"
     },
     "55275": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "55221": {
@@ -35782,8 +35782,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55181": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "yost"
     },
@@ -35908,8 +35908,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55435": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "yost"
     },
@@ -36052,8 +36052,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55311": {
-      "school_long": "\"University of Maine",
-      "school_short": " Orono\"",
+      "school_long": "University of Maine",
+      "school_short": "Orono",
       "world": "Maine",
       "division": "yost"
     },
@@ -36064,8 +36064,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55205": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "yost"
     },
@@ -36076,8 +36076,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55300": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "yost"
     },
@@ -36088,8 +36088,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55083": {
-      "school_long": "\"University of Illinois",
-      "school_short": " Champaign\"",
+      "school_long": "University of Illinois",
+      "school_short": "Champaign",
       "world": "Illinois",
       "division": "yost"
     },
@@ -36148,8 +36148,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55577": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "yost"
     },
@@ -36196,8 +36196,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55207": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Duluth\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Duluth",
       "world": "Minnesota-Duluth",
       "division": "yost"
     },
@@ -36238,14 +36238,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55123": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "yost"
     },
     "55259": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "yost"
     },
@@ -36274,14 +36274,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55140": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "yost"
     },
     "55306": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Amherst\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Amherst",
       "world": "Massachusetts",
       "division": "yost"
     },
@@ -36292,8 +36292,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55264": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "yost"
     },
@@ -36310,8 +36310,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55267": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "yost"
     },
@@ -36328,14 +36328,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55141": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "yost"
     },
     "55128": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "yost"
     },
@@ -36418,20 +36418,20 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55684": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "yost"
     },
     "55685": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "yost"
     },
     "55688": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stout\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stout",
       "world": "Wisconsin-Stout",
       "division": "yost"
     },
@@ -36490,8 +36490,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55687": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Oshkosh\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Oshkosh",
       "world": "Wisconsin-Oshkosh",
       "division": "yost"
     },
@@ -36538,8 +36538,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55387": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Pine Bluff\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Pine Bluff",
       "world": "Arkansas-Pine Bluff",
       "division": "yost"
     },
@@ -36550,8 +36550,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55682": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " La Crosse\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "La Crosse",
       "world": "Wisconsin-La Crosse",
       "division": "yost"
     },
@@ -36658,8 +36658,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55135": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "yost"
     },
@@ -36700,8 +36700,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55683": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "yost"
     },
@@ -36712,14 +36712,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "55663": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "yost"
     },
     "55434": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "yost"
     },
@@ -36778,8 +36778,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55681": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "yost"
     },
@@ -36796,8 +36796,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55132": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "yost"
     },
@@ -37084,8 +37084,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "50584": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "bryant"
     },
@@ -37126,8 +37126,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49082": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "rockne"
     },
@@ -37168,8 +37168,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51192": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "wilkinson"
     },
@@ -37204,8 +37204,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "55254": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "yost"
     },
@@ -37216,8 +37216,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49595": {
-      "school_long": "\"University of Alabama",
-      "school_short": " Tuscaloosa\"",
+      "school_long": "University of Alabama",
+      "school_short": "Tuscaloosa",
       "world": "Alabama",
       "division": "camp"
     },
@@ -37300,8 +37300,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53238": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "warner"
     },
@@ -37474,8 +37474,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53864": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "dobie"
     },
@@ -37516,8 +37516,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51804": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "leahy"
     },
@@ -37594,8 +37594,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55088": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "yost"
     },
@@ -37630,8 +37630,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "54476": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "hayes"
     },
@@ -37654,8 +37654,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50580": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "bryant"
     },
@@ -37696,8 +37696,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52660": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "warner"
     },
@@ -37774,8 +37774,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52484": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "stagg"
     },
@@ -37810,8 +37810,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "55273": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "yost"
     },
@@ -37858,8 +37858,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55422": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Monticello\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Monticello",
       "world": "Arkansas-Monticello",
       "division": "yost"
     },
@@ -37888,8 +37888,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49501": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "rockne"
     },
@@ -37900,8 +37900,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55071": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "hayes"
     },
@@ -37912,8 +37912,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49619": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "camp"
     },
@@ -37966,8 +37966,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "51414": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "leahy"
     },
@@ -37978,8 +37978,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "55326": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "yost"
     },
@@ -37990,8 +37990,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "50807": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "wilkinson"
     },
@@ -38038,14 +38038,14 @@ function get_school_data() {
       "division": "D-II"
     },
     "54652": {
-      "school_long": "\"University of Nebraska",
-      "school_short": " Lincoln\"",
+      "school_long": "University of Nebraska",
+      "school_short": "Lincoln",
       "world": "Nebraska",
       "division": "hayes"
     },
     "50195": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "bryant"
     },
@@ -38254,8 +38254,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54210": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Commerce\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Commerce",
       "world": "Texas A&M-Commerce",
       "division": "dobie"
     },
@@ -38272,8 +38272,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52744": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "warner"
     },
@@ -38404,8 +38404,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "53356": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Moorhead\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Moorhead",
       "world": "Minnesota State-Moorhead",
       "division": "heisman"
     },
@@ -38422,14 +38422,14 @@ function get_school_data() {
       "division": "D-III"
     },
     "50058": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "camp"
     },
     "55087": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "yost"
     },
@@ -38530,8 +38530,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55445": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Rolla\"",
+      "school_long": "University of Missouri",
+      "school_short": "Rolla",
       "world": "Missouri-Rolla",
       "division": "yost"
     },
@@ -38656,8 +38656,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "49355": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "rockne"
     },
@@ -38710,8 +38710,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52225": {
-      "school_long": "\"University of Colorado",
-      "school_short": " Boulder\"",
+      "school_long": "University of Colorado",
+      "school_short": "Boulder",
       "world": "Colorado",
       "division": "stagg"
     },
@@ -38770,8 +38770,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52212": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "stagg"
     },
@@ -38800,8 +38800,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53215": {
-      "school_long": "\"University of the South",
-      "school_short": " Sewanee\"",
+      "school_long": "University of the South",
+      "school_short": "Sewanee",
       "world": "South-Sewanee",
       "division": "warner"
     },
@@ -38842,9 +38842,9 @@ function get_school_data() {
       "division": "D-III"
     },
     "49951": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "54253": {
@@ -38872,8 +38872,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53845": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Eau Claire\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Eau Claire",
       "world": "Wisconsin-Eau Claire",
       "division": "heisman"
     },
@@ -38896,8 +38896,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55265": {
-      "school_long": "\"University of Missouri",
-      "school_short": " Columbia\"",
+      "school_long": "University of Missouri",
+      "school_short": "Columbia",
       "world": "Missouri",
       "division": "yost"
     },
@@ -38932,8 +38932,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50820": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "wilkinson"
     },
@@ -38986,8 +38986,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53237": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Stevens Point\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Stevens Point",
       "world": "Wisconsin-Stevens Point",
       "division": "warner"
     },
@@ -39022,8 +39022,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53246": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "heisman"
     },
@@ -39202,8 +39202,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49583": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "camp"
     },
@@ -39220,8 +39220,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51894": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "leahy"
     },
@@ -39268,8 +39268,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52394": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Madison\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Madison",
       "world": "Wisconsin",
       "division": "stagg"
     },
@@ -39298,8 +39298,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49171": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "rockne"
     },
@@ -39316,8 +39316,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49972": {
-      "school_long": "\"Indiana University",
-      "school_short": " Bloomington\"",
+      "school_long": "Indiana University",
+      "school_short": "Bloomington",
       "world": "Indiana",
       "division": "camp"
     },
@@ -39364,8 +39364,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49282": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " River Falls\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "River Falls",
       "world": "Wisconsin-River Falls",
       "division": "rockne"
     },
@@ -39406,8 +39406,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "49010": {
-      "school_long": "\"Texas State University",
-      "school_short": " San Marcos\"",
+      "school_long": "Texas State University",
+      "school_short": "San Marcos",
       "world": "Texas State",
       "division": "rockne"
     },
@@ -39418,8 +39418,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "54475": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "hayes"
     },
@@ -39508,8 +39508,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "55686": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "yost"
     },
@@ -39568,8 +39568,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "49811": {
-      "school_long": "\"University of Massachusetts",
-      "school_short": " Dartmouth\"",
+      "school_long": "University of Massachusetts",
+      "school_short": "Dartmouth",
       "world": "UMass-Dartmouth",
       "division": "camp"
     },
@@ -39634,8 +39634,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51117": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Platteville\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Platteville",
       "world": "Wisconsin-Platteville",
       "division": "wilkinson"
     },
@@ -39658,14 +39658,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50934": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "wilkinson"
     },
     "49695": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "camp"
     },
@@ -39700,8 +39700,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53491": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "heisman"
     },
@@ -39712,8 +39712,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51803": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Twin Cities\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Twin Cities",
       "world": "Minnesota",
       "division": "leahy"
     },
@@ -39736,8 +39736,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "51600": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "leahy"
     },
@@ -39820,8 +39820,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53957": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "dobie"
     },
@@ -39832,8 +39832,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52143": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " Kingsville\"",
+      "school_long": "Texas A&M University",
+      "school_short": "Kingsville",
       "world": "Texas A&M-Kingsville",
       "division": "stagg"
     },
@@ -39850,8 +39850,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50199": {
-      "school_long": "\"University of Tennessee",
-      "school_short": " Knoxville\"",
+      "school_long": "University of Tennessee",
+      "school_short": "Knoxville",
       "world": "Tennessee",
       "division": "bryant"
     },
@@ -39898,8 +39898,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "53437": {
-      "school_long": "\"Texas A&M University",
-      "school_short": " College Station\"",
+      "school_long": "Texas A&M University",
+      "school_short": "College Station",
       "world": "Texas A&M",
       "division": "heisman"
     },
@@ -39916,8 +39916,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53899": {
-      "school_long": "\"University of California",
-      "school_short": " Berkeley\"",
+      "school_long": "University of California",
+      "school_short": "Berkeley",
       "world": "California",
       "division": "dobie"
     },
@@ -39958,8 +39958,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52539": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "stagg"
     },
@@ -39970,8 +39970,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "52322": {
-      "school_long": "\"University of Wisconsin",
-      "school_short": " Whitewater\"",
+      "school_long": "University of Wisconsin",
+      "school_short": "Whitewater",
       "world": "Wisconsin-Whitewater",
       "division": "stagg"
     },
@@ -39988,8 +39988,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49590": {
-      "school_long": "\"University of South Carolina",
-      "school_short": " Columbia\"",
+      "school_long": "University of South Carolina",
+      "school_short": "Columbia",
       "world": "South Carolina",
       "division": "camp"
     },
@@ -40024,8 +40024,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "51432": {
-      "school_long": "\"University of Arkansas",
-      "school_short": " Fayetteville\"",
+      "school_long": "University of Arkansas",
+      "school_short": "Fayetteville",
       "world": "Arkansas",
       "division": "leahy"
     },
@@ -40096,8 +40096,8 @@ function get_school_data() {
       "division": "D-II"
     },
     "50840": {
-      "school_long": "\"California State University",
-      "school_short": " Fresno\"",
+      "school_long": "California State University",
+      "school_short": "Fresno",
       "world": "Fresno State",
       "division": "wilkinson"
     },
@@ -40120,8 +40120,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "50988": {
-      "school_long": "\"University of North Carolina",
-      "school_short": " Chapel Hill\"",
+      "school_long": "University of North Carolina",
+      "school_short": "Chapel Hill",
       "world": "North Carolina",
       "division": "wilkinson"
     },
@@ -40138,8 +40138,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49446": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "rockne"
     },
@@ -40162,14 +40162,14 @@ function get_school_data() {
       "division": "D-IA"
     },
     "49339": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "51455": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "leahy"
     },
@@ -40180,20 +40180,20 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "53358": {
-      "school_long": "\"University of Minnesota",
-      "school_short": " Crookston\"",
+      "school_long": "University of Minnesota",
+      "school_short": "Crookston",
       "world": "Minnesota-Crookston",
       "division": "heisman"
     },
     "53332": {
-      "school_long": "\"Minnesota State University",
-      "school_short": " Mankato\"",
+      "school_long": "Minnesota State University",
+      "school_short": "Mankato",
       "world": "Minnesota State-Mankato",
       "division": "heisman"
     },
     "49157": {
-      "school_long": "\"University of Maryland",
-      "school_short": " College Park\"",
+      "school_long": "University of Maryland",
+      "school_short": "College Park",
       "world": "Maryland",
       "division": "rockne"
     },
@@ -40204,8 +40204,8 @@ function get_school_data() {
       "division": "D-IAA"
     },
     "52164": {
-      "school_long": "\"Concordia University",
-      "school_short": " St. Paul\"",
+      "school_long": "Concordia University",
+      "school_short": "St. Paul",
       "world": "Concordia",
       "division": "stagg"
     },
@@ -40306,8 +40306,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "52892": {
-      "school_long": "\"California State University",
-      "school_short": " Sacramento\"",
+      "school_long": "California State University",
+      "school_short": "Sacramento",
       "world": "California State",
       "division": "warner"
     },
@@ -40348,15 +40348,15 @@ function get_school_data() {
       "division": "D-II"
     },
     "52696": {
-      "school_long": "\"Southern University",
-      "school_short": " Baton Rouge\"",
+      "school_long": "Southern University",
+      "school_short": "Baton Rouge",
       "world": "Southern-Baton Rouge",
       "division": "warner"
     },
     "52827": {
-      "school_long": "\"Rutgers",
-      "school_short": " State University of New Jersey",
-      "world": " New Brunswick\"",
+      "school_long": "Rutgers",
+      "school_short": "State University of New Jersey",
+      "world": "New Brunswick",
       "division": "Rutgers"
     },
     "51644": {
@@ -40372,8 +40372,8 @@ function get_school_data() {
       "division": "D-III"
     },
     "52663": {
-      "school_long": "\"University of Nevada",
-      "school_short": " Las Vegas\"",
+      "school_long": "University of Nevada",
+      "school_short": "Las Vegas",
       "world": "UNLV",
       "division": "warner"
     },
@@ -40432,8 +40432,8 @@ function get_school_data() {
       "division": "D-IA"
     },
     "53496": {
-      "school_long": "\"University of California",
-      "school_short": " Los Angeles\"",
+      "school_long": "University of California",
+      "school_short": "Los Angeles",
       "world": "UCLA",
       "division": "heisman"
     }
