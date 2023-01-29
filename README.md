@@ -26,7 +26,7 @@ I am currently waiting on the Chrome Extension to be approved and published. In 
 1. Fixed issue where the URLs were not working correctly for certain schools.
 
 ### v0.0.0.3
-1. Resolved bug when changing Recruit Search to use the Raitings View where there is no Hometown column.
+1. Resolved bug when changing Recruit Search to use the Ratings View where there is no Hometown column.
 
 ### v0.0.0.2
 1. Updated manifest file to support Firefox v109 or newer. Note: Extension is pending approval by Mozilla.
