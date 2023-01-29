@@ -4,7 +4,12 @@ Chrome Extension for mapping recruit hometowns using GDAnalyst website
 ## Description
 This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS). When you search for recruits, the web page displays the recruits hometown (City, ST). This extension modifies the hometown to be a URL that opens the GDAnalyst website (gdanalyst.herokuapp.com) and leverages its mapping capability to show you where the recruit is located compared to all human coaches in that world and division.
 
-## How To Use
+## How To Install
+### Firefox (v109 or newer)
+1. Install the extension from the Firefox Add-on site [here](https://addons.mozilla.org/en-US/firefox/addon/wis-gridiron-dynasty-mapper/).
+2. By default it will only run when you click the Extension Icon. You can change the extension to "Always Allow on Whatifsports.com", and it will then work automatically.
+
+### Chromium Extension (Google Chrome and Microsoft Edge)
 I am currently waiting on the Chrome Extension to be approved and published. In the meantime, here are instructions on how to load the unpacked extension manually.
 
 1. [Download the .zip file](https://github.com/ebzimny01/gd_chromium_ext/blob/master/gd_chromium_ext.zip) from the repository
@@ -14,9 +19,11 @@ I am currently waiting on the Chrome Extension to be approved and published. In 
 5. Enable "Developer Mode" (there is a toggle on left side of page).
 6. elect "Load Unpacked Extension" (button near top of page)
 7. Select the folder that you unzipped the files to in step #2 above
-8. Do a Recruit Search on WIS GD
-9. The recruits' hometowns should be modified with a + sign in front and have a hyperlink
-10. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division
+
+## How to Use
+1. Do a "Recruiting Search" on WIS GD.
+2. The recruits' hometowns should be modified with a + sign in front and have a hyperlink.
+3. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division.
 
 ## Release Notes
 ### v0.0.0.5
