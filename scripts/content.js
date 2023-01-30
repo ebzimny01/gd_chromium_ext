@@ -4,49 +4,81 @@ const rectuit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings
 const parser = new DOMParser();
 const schools = get_school_data();
 const active_school_id = document.getElementById('pagetid')['value'];
-const world = schools[active_school_id]['world']
-const division = schools[active_school_id]['division']
+const id_search_pattern = `javascript:OpenTeamProfile(${active_school_id},0)`;
+// const re = new RegExp('javascript:OpenTeamProfile\(\d{5},0\);');
+const world = schools[active_school_id]['world'];
+const division = schools[active_school_id]['division'];
 const map_url_prefix = `https://gdanalyst.herokuapp.com/world/${world}/${division}/town?town=`;
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
-  try {
-    const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResults');
-    const table_section = section.getElementsByTagName('tbody');
-    let t = table_section[0];
-    let hometown_exists = false;
-    let h = 0;
-    // establishes the column number for 'Hometown' by searching 1st row
-    for (let c = 0; c < t.rows[0].cells.length; c++) {
-      if (t.rows[0].cells[c].textContent==="Hometown") {
-        h = c; 
-        console.log(`Hometown is column number ${h}`);
-        hometown_exists = true;
-      } else {
-        console.log('Could not find Hometown column number.');
-      }
-    }
-    if (hometown_exists){
-      // Parses all rows of recruit search table and adds GD link to hometown
-      for (let r = 1; r < t.rows.length; r++) {
-        let cell = t.rows[r].cells[h].innerHTML;
-        if (cell!="Hometown"){ // Skips over the table header rows
-          // console.log(cell);
-          let map_url_full = map_url_prefix + cell;
-          // console.log(map_url_full);
-          t.rows[r].cells[h].innerHTML = '';
-          let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
-          t.rows[r].cells[h].appendChild(html_to_insert.documentElement);
-          // console.log(t.rows[r].cells[h].innerHTML);
+  const gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
+  const rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+  // First add map links for hometowns only for General View
+  if (gv) {
+    try {
+      // const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResults');
+      const table_section = gv.getElementsByTagName('tbody');
+      let t = table_section[0];
+      let hometown_exists = false;
+      let h = 0;
+      // establishes the column number for 'Hometown' by searching 1st row
+      for (let c = 0; c < t.rows[0].cells.length; c++) {
+        if (t.rows[0].cells[c].textContent==="Hometown") {
+          h = c; 
+          console.log(`Hometown is column number ${h}`);
+          hometown_exists = true;
+        } else {
+          console.log('Could not find Hometown column number.');
         }
       }
-      console.log('Updated Hometowns with URL links.')
-    } else {
-      console.log('Hometown column does not exist.')
+      if (hometown_exists){
+        // Parses all rows of recruit search table and adds GD link to hometown
+        for (let r = 1; r < t.rows.length; r++) {
+          let cell = t.rows[r].cells[h].innerHTML;
+          if (cell!="Hometown"){ // Skips over the table header rows
+            // console.log(cell);
+            let map_url_full = map_url_prefix + cell;
+            // console.log(map_url_full);
+            t.rows[r].cells[h].innerHTML = '';
+            let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
+            t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
+            // console.log(t.rows[r].cells[h].innerHTML);
+          }
+        }
+        console.log('Updated Hometowns with URL links.')
+      } else {
+        console.log('Hometown column does not exist.')
+      }
+    } catch (err) {
+      console.log(err);
+      console.log('Recruiting search page is empty so unable to add map URLs.')
     }
-  } catch (err) {
-    console.log(err);
-    console.log('Recruiting search page is empty so unable to add map URLs.')
   }
+  
+  // Second, add background highlight when 'Considering' matches current team profile
+  let r = null;
+  if (gv) {
+    console.log('Found General View');
+    r = gv.querySelectorAll('tr'); // get all rows from table
+  } else if (rv) {
+    console.log('Found Rating View');
+    r = rv.querySelectorAll('tr'); // get all rows from table
+  } else {
+    console.log('No view found');
+  }
+  for (let index = 0; index < r.length; index++) {
+    if (r[index].innerHTML.includes(id_search_pattern)) {
+        console.log('TeamId found',active_school_id, `Row ${index}`);
+        if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
+          // battle shows yellow background
+          console.log('Recruiting battle', true,'Setting background to yellow')
+          r[index].setAttribute('style', 'background-color:yellow');
+        } else {
+          // no battle shows green
+          console.log('Recruiting battle', false, 'setting background to green')
+          r[index].setAttribute('style', 'background-color:lightgreen');
+        }
+    }};
 } else if (url.includes(rectuit_page_url)) {
     // This section is for the Recruit Page
     try {
