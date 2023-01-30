@@ -26,6 +26,12 @@ I am currently waiting on the Chrome Extension to be approved and published. In 
 3. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division.
 
 ## Release Notes
+### v0.0.1.1
+1. Enhancement - When you perform a Recruiting Search, if a recruit is "yellow" for your school, the recruit's row background will be YELLOW, and if a recruit is "green" for your school, the recruit's row background will be GREEN.
+
+### v0.0.1.0
+1. Enhancement - When you open a recruit's profile page, the hometown will now be linked to map location on GDAnalyst website.
+
 ### v0.0.0.5
 1. Ok, this time I really fixed the issue where URLs were not working correctly for certain schools. (pretty sure at least)
 
