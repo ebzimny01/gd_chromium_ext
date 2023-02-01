@@ -10,15 +10,7 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 2. By default it will only run when you click the Extension Icon. You can change the extension to "Always Allow on Whatifsports.com", and it will then work automatically.
 
 ### Chromium Extension (Google Chrome and Microsoft Edge)
-I am currently waiting on the Chrome Extension to be approved and published. In the meantime, here are instructions on how to load the unpacked extension manually.
-
-1. [Download the .zip file](https://github.com/ebzimny01/gd_chromium_ext/blob/master/gd_chromium_ext.zip) from the repository
-2. Unzip the downloaded file to a folder location of your choice
-3. Open a Chromium-based browser - e.g. Chrome or Edge
-4. Enter "chrome://extensions" in the address bar and hit "ENTER" key (or "edge://extensions" if using Edge browser)
-5. Enable "Developer Mode" (there is a toggle on left side of page).
-6. elect "Load Unpacked Extension" (button near top of page)
-7. Select the folder that you unzipped the files to in step #2 above
+1. Chrome extension is available from Chrome Web Store [here](https://chrome.google.com/webstore/detail/city-mapper-for-wis-gridi/elfljjgjfjddifffclgoifgnliibnlll).
 
 ## How to Use
 1. Do a "Recruiting Search" on WIS GD.
