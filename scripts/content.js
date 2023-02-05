@@ -1,10 +1,9 @@
 const url = getCurrentURL()
 const recruiting_search_url = 'https://www.whatifsports.com/gd/recruiting/Search.aspx';
-const rectuit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx';
+const recruit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx';
 const parser = new DOMParser();
 const schools = get_school_data();
 const active_school_id = document.getElementById('pagetid')['value'];
-const id_search_pattern = `javascript:OpenTeamProfile(${active_school_id},0)`;
 // const re = new RegExp('javascript:OpenTeamProfile\(\d{5},0\);');
 const world = schools[active_school_id]['world'];
 const division = schools[active_school_id]['division'];
@@ -13,73 +12,23 @@ if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
   const gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
   const rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+  
   // First add map links for hometowns only for General View
   if (gv) {
-    try {
-      // const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResults');
-      const table_section = gv.getElementsByTagName('tbody');
-      let t = table_section[0];
-      let hometown_exists = false;
-      let h = 0;
-      // establishes the column number for 'Hometown' by searching 1st row
-      for (let c = 0; c < t.rows[0].cells.length; c++) {
-        if (t.rows[0].cells[c].textContent==="Hometown") {
-          h = c; 
-          console.log(`Hometown is column number ${h}`);
-          hometown_exists = true;
-        } else {
-          console.log('Could not find Hometown column number.');
-        }
-      }
-      if (hometown_exists){
-        // Parses all rows of recruit search table and adds GD link to hometown
-        for (let r = 1; r < t.rows.length; r++) {
-          let cell = t.rows[r].cells[h].innerHTML;
-          if (cell!="Hometown"){ // Skips over the table header rows
-            // console.log(cell);
-            let map_url_full = map_url_prefix + cell;
-            // console.log(map_url_full);
-            t.rows[r].cells[h].innerHTML = '';
-            let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
-            t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
-            // console.log(t.rows[r].cells[h].innerHTML);
-          }
-        }
-        console.log('Updated Hometowns with URL links.')
-      } else {
-        console.log('Hometown column does not exist.')
-      }
-    } catch (err) {
-      console.log(err);
-      console.log('Recruiting search page is empty so unable to add map URLs.')
-    }
-  }
-  
-  // Second, add background highlight when 'Considering' matches current team profile
-  let r = null;
-  if (gv) {
     console.log('Found General View');
-    r = gv.querySelectorAll('tr'); // get all rows from table
+    updateGeneralView(gv);
+    //! This observer part is not working correctly.
+    createObserver(gv);
   } else if (rv) {
     console.log('Found Rating View');
-    r = rv.querySelectorAll('tr'); // get all rows from table
+    updateRatingsView(rv);
+    //! This observer part is not working correctly.
+    createObserver(rv);
   } else {
     console.log('No view found');
   }
-  for (let index = 0; index < r.length; index++) {
-    if (r[index].innerHTML.includes(id_search_pattern)) {
-        console.log('TeamId found',active_school_id, `Row ${index}`);
-        if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
-          // battle shows yellow background
-          console.log('Recruiting battle', true,'Setting background to yellow')
-          r[index].setAttribute('style', 'background-color:yellow');
-        } else {
-          // no battle shows green
-          console.log('Recruiting battle', false, 'setting background to green')
-          r[index].setAttribute('style', 'background-color:lightgreen');
-        }
-    }};
-} else if (url.includes(rectuit_page_url)) {
+  
+} else if (url.includes(recruit_page_url)) {
     // This section is for the Recruit Page
     try {
       const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_homeTown');
@@ -97,6 +46,126 @@ if (url.includes(recruiting_search_url)) {
     console.log('Page is not recognized as having any Hometown information to update.')
 }
 
+
+function updateGeneralView(v) {
+  try {
+    const table_section = v.getElementsByTagName('tbody');
+    let t = table_section[0];
+    // determine if hometown column exits and which col number
+    let hometown_exists = htowncol(t);
+    if (hometown_exists !== null){
+      // Parses all rows of recruit search table and adds GD link to hometown
+      addMapLinks(t, hometown_exists);
+      console.log('Updated Hometowns with URL links.')
+      highlightRows(t);
+    } else {
+      console.log('Hometown column does not exist.')
+    }
+  } catch (err) {
+    console.log(err);
+    console.log('Recruiting search page is empty so unable to add map URLs.')
+  }
+}
+
+
+function updateRatingsView(v) {
+  try {
+    const table_section = v.getElementsByTagName('tbody');
+    let t = table_section[0];
+    highlightRows(t);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+function createObserver(target) {
+  console.log('Starting observer...');
+  //const target = document.querySelector('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__');
+  console.log(target);
+  const observer = new MutationObserver((mutationsList, observer) => {
+    for(const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+            const gv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
+            const rv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+            if (target === gv) {
+              updateGeneralView(target);
+            } else if (target === rv) {
+              updateRatingsView(target);
+            }
+            //const nodes = mutation.addedNodes;
+            //nodes.forEach(node => {
+            //    console.log(node);
+            //});
+        }
+    }
+  });
+  observer.observe(target, { 
+      attributes: true, 
+      childList: true, 
+      subtree: true }
+  );
+}
+
+// establishes the column number for 'Hometown' by searching 1st row of table
+// returns null if hometown not found
+// returns column # of hometown found
+function htowncol (t) {
+  let h = null
+  for (let c = 0; c < t.rows[0].cells.length; c++) {
+    if (t.rows[0].cells[c].textContent==="Hometown") {
+      h = c; 
+      console.log(`Hometown is column number ${h}`);
+    } else {
+      console.log('Could not find Hometown column number.');
+    }
+  }
+  return h;
+}
+
+
+function addMapLinks (t,h) {
+  for (let r = 1; r < t.rows.length; r++) {
+    let cell = t.rows[r].cells[h].innerHTML;
+    if (cell!="Hometown"){ // Skips over the table header rows
+      // console.log(cell);
+      let map_url_full = map_url_prefix + cell;
+      // console.log(map_url_full);
+      t.rows[r].cells[h].innerHTML = '';
+      let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
+      t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
+      // console.log(t.rows[r].cells[h].innerHTML);
+    }
+  }
+}
+
+
+function highlightRows (t) {
+  const id_search_pattern = `javascript:OpenTeamProfile(${active_school_id},0)`;
+  const r = t.querySelectorAll('tr'); // get all rows from table
+  for (let index = 0; index < r.length; index++) {
+    // If recruit is being Watched then highlight background color light blue
+    if (r[index].getElementsByClassName('ContactedRecruit').length !== 0) {
+      console.log(`Row ${index} is a Watched Recruit`);
+      r[index].setAttribute('style', 'background-color:lightblue');
+    };
+    // Find recruit rows that have the current school Id in considering field
+    // If considering school + other schooles then highlight yellow
+    // If consider school alone then highlight light green
+    if (r[index].innerHTML.includes(id_search_pattern)) {
+      console.log('TeamId found',active_school_id, `Row ${index}`);
+      if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
+        // battle shows yellow background
+        console.log('Recruiting battle', true,'Setting background to yellow')
+        r[index].setAttribute('style', 'background-color:yellow');
+      } else {
+        // no battle shows green
+        console.log('Recruiting battle', false, 'setting background to green')
+        r[index].setAttribute('style', 'background-color:lightgreen');
+      }
+    }
+  };
+}
 
 function getCurrentURL () {
   return window.location.href
