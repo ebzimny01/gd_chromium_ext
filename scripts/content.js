@@ -83,6 +83,8 @@ function updateRatingsView(v) {
 function createObserver(p, target, x) {
   console.log('Starting observer...');
   console.log(p);
+  
+  /* Use this for debugging observer
   const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (mutation.addedNodes.length) {
@@ -91,13 +93,12 @@ function createObserver(p, target, x) {
       if (mutation.removedNodes.length) {
         console.log('Removed', mutation.removedNodes[0])
       }})});
+  */
 
-  /*
   const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('A child node has been added or removed.');
-            console.log(mutation);
+        if (mutation.addedNodes.length) {
+            console.log('Added', mutation.addedNodes[0])
             // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
@@ -114,7 +115,7 @@ function createObserver(p, target, x) {
         }
     }
   });
-  */
+  
   observer.observe(p, { 
       attributes: true, 
       childList: true, 
