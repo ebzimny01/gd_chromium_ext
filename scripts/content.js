@@ -83,7 +83,7 @@ function updateRatingsView(v) {
 function observer(p, target, x) {
   console.log('Starting observer...');
   console.log(p);
-  const mutationObserver = new MutationObserver(function (mutations) {
+  const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (mutation.addedNodes.length) {
         console.log('Added', mutation.addedNodes[0])
