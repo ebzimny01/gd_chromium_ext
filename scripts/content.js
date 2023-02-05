@@ -19,12 +19,12 @@ if (url.includes(recruiting_search_url)) {
     console.log('Found General View');
     updateGeneralView(gv);
     //! This observer part is not working correctly.
-    createObserver(gv);
+    createObserver(parentDiv, gv);
   } else if (rv) {
     console.log('Found Rating View');
     updateRatingsView(rv);
     //! This observer part is not working correctly.
-    createObserver(rv);
+    createObserver(parentDiv, rv);
   } else {
     console.log('No view found');
   }
@@ -79,16 +79,15 @@ function updateRatingsView(v) {
   }
 }
 
-function createObserver(target) {
+function createObserver(p, target) {
   console.log('Starting observer...');
-  //const target = document.querySelector('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__');
-  console.log(target);
+  console.log(p);
   const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
-            const gv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
-            const rv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+            const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
+            const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (target === gv) {
               console.log('Observer updating General View...');
               updateGeneralView(target);
@@ -98,16 +97,16 @@ function createObserver(target) {
             } else {
               console.log('Observer failed to find anything to update!');
             }
-            //const nodes = mutation.addedNodes;
-            //nodes.forEach(node => {
-            //    console.log(node);
-            //});
+            const nodes = mutation.addedNodes;
+            nodes.forEach(node => {
+                console.log(node);
+            });
         } else {
           console.log('No mutation type found!')
         }
     }
   });
-  observer.observe(target, { 
+  observer.observe(p, { 
       attributes: true, 
       childList: true, 
       subtree: true }
