@@ -79,9 +79,20 @@ function updateRatingsView(v) {
   }
 }
 
-function createObserver(p, target, x) {
+// testing observer
+function observer(p, target, x) {
   console.log('Starting observer...');
   console.log(p);
+  const mutationObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.addedNodes.length) {
+        console.log('Added', mutation.addedNodes[0])
+      }
+      if (mutation.removedNodes.length) {
+        console.log('Removed', mutation.removedNodes[0])
+      }})});
+
+  /*
   const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
@@ -103,6 +114,7 @@ function createObserver(p, target, x) {
         }
     }
   });
+  */
   observer.observe(p, { 
       attributes: true, 
       childList: true, 
