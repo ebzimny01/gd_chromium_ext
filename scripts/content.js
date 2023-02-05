@@ -80,7 +80,7 @@ function updateRatingsView(v) {
 }
 
 // testing observer
-function observer(p, target, x) {
+function createObserver(p, target, x) {
   console.log('Starting observer...');
   console.log(p);
   const observer = new MutationObserver(function (mutations) {
