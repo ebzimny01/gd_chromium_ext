@@ -10,6 +10,7 @@ const division = schools[active_school_id]['division'];
 const map_url_prefix = `https://gdanalyst.herokuapp.com/world/${world}/${division}/town?town=`;
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
+  const parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); // get the parent element that we will observe for changes
   const gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
   const rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
   
@@ -89,14 +90,20 @@ function createObserver(target) {
             const gv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             const rv = target.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (target === gv) {
+              console.log('Observer updating General View...');
               updateGeneralView(target);
             } else if (target === rv) {
+              console.log('Observer updating Ratings View...');
               updateRatingsView(target);
+            } else {
+              console.log('Observer failed to find anything to update!');
             }
             //const nodes = mutation.addedNodes;
             //nodes.forEach(node => {
             //    console.log(node);
             //});
+        } else {
+          console.log('No mutation type found!')
         }
     }
   });
