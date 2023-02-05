@@ -19,12 +19,12 @@ if (url.includes(recruiting_search_url)) {
     console.log('Found General View');
     updateGeneralView(gv);
     //! This observer part is not working correctly.
-    createObserver(parentDiv, gv);
+    createObserver(parentDiv, gv, 'gv');
   } else if (rv) {
     console.log('Found Rating View');
     updateRatingsView(rv);
     //! This observer part is not working correctly.
-    createObserver(parentDiv, rv);
+    createObserver(parentDiv, rv, 'rv');
   } else {
     console.log('No view found');
   }
@@ -79,19 +79,19 @@ function updateRatingsView(v) {
   }
 }
 
-function createObserver(p, target) {
+function createObserver(p, target, x) {
   console.log('Starting observer...');
   console.log(p);
   const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
-            const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
-            const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
-            if (target === gv) {
+            // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
+            // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+            if (x === 'gv') {
               console.log('Observer updating General View...');
               updateGeneralView(target);
-            } else if (target === rv) {
+            } else if (x === 'rv') {
               console.log('Observer updating Ratings View...');
               updateRatingsView(target);
             } else {
