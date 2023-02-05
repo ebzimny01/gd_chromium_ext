@@ -19,12 +19,12 @@ if (url.includes(recruiting_search_url)) {
     console.log('Found General View');
     updateGeneralView(gv);
     //! This observer part is not working correctly.
-    createObserver(parentDiv, gv, 'gv');
+    createObserver(parentDiv, 'gv');
   } else if (rv) {
     console.log('Found Rating View');
     updateRatingsView(rv);
     //! This observer part is not working correctly.
-    createObserver(parentDiv, rv, 'rv');
+    createObserver(parentDiv, 'rv');
   } else {
     console.log('No view found');
   }
@@ -80,7 +80,7 @@ function updateRatingsView(v) {
 }
 
 // testing observer
-function createObserver(p, target, x) {
+function createObserver(p, x) {
   console.log('Starting observer...');
   console.log(p);
   
@@ -102,11 +102,13 @@ function createObserver(p, target, x) {
             // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
+              let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
               console.log('Observer updating General View...');
-              setTimeout(updateGeneralView(target), 1000);
+              setTimeout(updateGeneralView(g), 1000);
             } else if (x === 'rv') {
+              let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
               console.log('Observer updating Ratings View...');
-              setTimeout(updateRatingsView(target), 1000);
+              setTimeout(updateRatingsView(r), 1000);
             } else {
               console.log('Observer failed to find anything to update!');
             }
