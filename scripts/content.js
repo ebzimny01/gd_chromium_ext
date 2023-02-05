@@ -90,10 +90,10 @@ function createObserver(p, target, x) {
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
               console.log('Observer updating General View...');
-              updateGeneralView(target);
+              setTimeout(updateGeneralView(target), 1000);
             } else if (x === 'rv') {
               console.log('Observer updating Ratings View...');
-              updateRatingsView(target);
+              setTimeout(updateRatingsView(target), 1000);
             } else {
               console.log('Observer failed to find anything to update!');
             }
