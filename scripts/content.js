@@ -86,10 +86,7 @@ function createObserver(p, target, x) {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
-            const nodes = mutation.addedNodes;
-            nodes.forEach(node => {
-                console.log(node);
-            });
+            console.log(mutation);
             // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
