@@ -86,6 +86,10 @@ function createObserver(p, target, x) {
     for(const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
+            const nodes = mutation.addedNodes;
+            nodes.forEach(node => {
+                console.log(node);
+            });
             // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
@@ -97,10 +101,6 @@ function createObserver(p, target, x) {
             } else {
               console.log('Observer failed to find anything to update!');
             }
-            const nodes = mutation.addedNodes;
-            nodes.forEach(node => {
-                console.log(node);
-            });
         } else {
           console.log('No mutation type found!')
         }
