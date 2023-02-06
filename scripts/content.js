@@ -10,21 +10,19 @@ const division = schools[active_school_id]['division'];
 const map_url_prefix = `https://gdanalyst.herokuapp.com/world/${world}/${division}/town?town=`;
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
-  const parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); // get the parent element that we will observe for changes
-  const gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
-  const rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
+  let parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); // get the parent element that we will observe for changes
+  let gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
+  let rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
   
   // First add map links for hometowns only for General View
   if (gv) {
     console.log('Found General View');
     updateGeneralView(gv);
-    //! This observer part is not working correctly.
-    createObserver(parentDiv, 'gv');
+    
   } else if (rv) {
     console.log('Found Rating View');
     updateRatingsView(rv);
-    //! This observer part is not working correctly.
-    createObserver(parentDiv, 'rv');
+    
   } else {
     console.log('No view found');
   }
@@ -66,6 +64,8 @@ function updateGeneralView(v) {
     console.log(err);
     console.log('Recruiting search page is empty so unable to add map URLs.')
   }
+  //! This observer part is not working correctly.
+  createObserver(parentDiv, 'gv');
 }
 
 
@@ -77,6 +77,8 @@ function updateRatingsView(v) {
   } catch (err) {
     console.log(err);
   }
+  //! This observer part is not working correctly.
+  createObserver(parentDiv, 'rv');
 }
 
 // testing observer
@@ -103,12 +105,14 @@ function createObserver(p, x) {
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
               let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
-              console.log('Observer updating General View...');
-              setTimeout(updateGeneralView(g), 1000);
+              observer.disconnect();
+              console.log('Observer disconnecting and updating General View...');
+              updateGeneralView(g);
             } else if (x === 'rv') {
               let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
-              console.log('Observer updating Ratings View...');
-              setTimeout(updateRatingsView(r), 1000);
+              observer.disconnect();
+              console.log('Observer disconnecting and updating Ratings View...');
+              updateRatingsView(r);
             } else {
               console.log('Observer failed to find anything to update!');
             }
