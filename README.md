@@ -18,6 +18,11 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 3. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division.
 
 ## Release Notes
+### v0.0.1.2
+1. Resolves an issue where the page updates made by the extension may disappear if certain actions are taken on the page (e.g. clicking check box to add a recruit to your watchlist or changing some of the search filter options at the top).
+2. Restructured the code into multiple functions.
+3. Added more code comments.
+
 ### v0.0.1.1
 1. Enhancement - When you perform a Recruiting Search, if a recruit is "yellow" for your school, the recruit's row background will be YELLOW, and if a recruit is "green" for your school, the recruit's row background will be GREEN.
 
