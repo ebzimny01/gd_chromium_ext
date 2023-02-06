@@ -16,15 +16,15 @@ if (url.includes(recruiting_search_url)) {
   
   // First add map links for hometowns only for General View
   if (gv) {
-    console.log('Found General View');
+    console.debug('Found General View');
     updateGeneralView(gv);
     
   } else if (rv) {
-    console.log('Found Rating View');
+    console.debug('Found Rating View');
     updateRatingsView(rv);
     
   } else {
-    console.log('No view found');
+    console.debug('No view found');
   }
   
 } else if (url.includes(recruit_page_url)) {
@@ -32,17 +32,17 @@ if (url.includes(recruiting_search_url)) {
     try {
       const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_homeTown');
       let hometown = section.textContent;
-      console.log(`Recruit's hometown is ${hometown}`);
+      console.debug(`Recruit's hometown is ${hometown}`);
       let map_url_full = map_url_prefix + hometown;
       section.innerHTML = '';
       let html_to_insert = parser.parseFromString(`<a href="${map_url_full}" style="color: yellow" target="_blank">+${hometown}</a>`, "text/html");
       section.appendChild(html_to_insert.body.firstChild);
     } catch (err) {
-      console.log(err);
-      console.log('Error finding hometown on Recruit Page.')
+      console.debug(err);
+      console.debug('Error finding hometown on Recruit Page.')
     }
 } else {
-    console.log('Page is not recognized as having any Hometown information to update.')
+    console.debug('Page is not recognized as having any Hometown information to update.')
 }
 
 
@@ -55,14 +55,14 @@ function updateGeneralView(v) {
     if (hometown_exists !== null){
       // Parses all rows of recruit search table and adds GD link to hometown
       addMapLinks(t, hometown_exists);
-      console.log('Updated Hometowns with URL links.')
+      console.debug('Updated Hometowns with URL links.')
       highlightRows(t);
     } else {
-      console.log('Hometown column does not exist.')
+      console.debug('Hometown column does not exist.')
     }
   } catch (err) {
-    console.log(err);
-    console.log('Recruiting search page is empty so unable to add map URLs.')
+    console.debug(err);
+    console.debug('Recruiting search page is empty so unable to add map URLs.')
   }
   //! This observer part is not working correctly.
   createObserver(parentDiv, 'gv');
@@ -75,7 +75,7 @@ function updateRatingsView(v) {
     let t = table_section[0];
     highlightRows(t);
   } catch (err) {
-    console.log(err);
+    console.debug(err);
   }
   //! This observer part is not working correctly.
   createObserver(parentDiv, 'rv');
@@ -83,41 +83,41 @@ function updateRatingsView(v) {
 
 // testing observer
 function createObserver(p, x) {
-  console.log('Starting observer...');
-  console.log(p);
+  console.debug('Starting observer...');
+  console.debug(p);
   
   /* Use this for debugging observer
   const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (mutation.addedNodes.length) {
-        console.log('Added', mutation.addedNodes[0])
+        console.debug('Added', mutation.addedNodes[0])
       }
       if (mutation.removedNodes.length) {
-        console.log('Removed', mutation.removedNodes[0])
+        console.debug('Removed', mutation.removedNodes[0])
       }})});
   */
 
   const observer = new MutationObserver((mutationsList, observer) => {
     for(const mutation of mutationsList) {
         if (mutation.addedNodes.length) {
-            console.log('Added', mutation.addedNodes[0])
+            console.debug('Added', mutation.addedNodes[0])
             // const gv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
             // const rv = p.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
             if (x === 'gv') {
               let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
               observer.disconnect();
-              console.log('Observer disconnecting and updating General View...');
+              console.debug('Observer disconnecting and updating General View...');
               updateGeneralView(g);
             } else if (x === 'rv') {
               let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
               observer.disconnect();
-              console.log('Observer disconnecting and updating Ratings View...');
+              console.debug('Observer disconnecting and updating Ratings View...');
               updateRatingsView(r);
             } else {
-              console.log('Observer failed to find anything to update!');
+              console.debug('Observer failed to find anything to update!');
             }
         } else {
-          console.log('No mutation type found!')
+          console.debug('No mutation type found!')
         }
     }
   });
@@ -137,9 +137,9 @@ function htowncol (t) {
   for (let c = 0; c < t.rows[0].cells.length; c++) {
     if (t.rows[0].cells[c].textContent==="Hometown") {
       h = c; 
-      console.log(`Hometown is column number ${h}`);
+      console.debug(`Hometown is column number ${h}`);
     } else {
-      console.log('Could not find Hometown column number.');
+      console.debug('Could not find Hometown column number.');
     }
   }
   return h;
@@ -150,13 +150,13 @@ function addMapLinks (t,h) {
   for (let r = 1; r < t.rows.length; r++) {
     let cell = t.rows[r].cells[h].innerHTML;
     if (cell!="Hometown"){ // Skips over the table header rows
-      // console.log(cell);
+      // console.debug(cell);
       let map_url_full = map_url_prefix + cell;
-      // console.log(map_url_full);
+      // console.debug(map_url_full);
       t.rows[r].cells[h].innerHTML = '';
       let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
       t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
-      // console.log(t.rows[r].cells[h].innerHTML);
+      // console.debug(t.rows[r].cells[h].innerHTML);
     }
   }
 }
@@ -168,21 +168,21 @@ function highlightRows (t) {
   for (let index = 0; index < r.length; index++) {
     // If recruit is being Watched then highlight background color light blue
     if (r[index].getElementsByClassName('ContactedRecruit').length !== 0) {
-      console.log(`Row ${index} is a Watched Recruit`);
+      console.debug(`Row ${index} is a Watched Recruit`);
       r[index].setAttribute('style', 'background-color:lightblue');
     };
     // Find recruit rows that have the current school Id in considering field
     // If considering school + other schooles then highlight yellow
     // If consider school alone then highlight light green
     if (r[index].innerHTML.includes(id_search_pattern)) {
-      console.log('TeamId found',active_school_id, `Row ${index}`);
+      console.debug('TeamId found',active_school_id, `Row ${index}`);
       if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
         // battle shows yellow background
-        console.log('Recruiting battle', true,'Setting background to yellow')
+        console.debug('Recruiting battle', true,'Setting background to yellow')
         r[index].setAttribute('style', 'background-color:yellow');
       } else {
         // no battle shows green
-        console.log('Recruiting battle', false, 'setting background to green')
+        console.debug('Recruiting battle', false, 'setting background to green')
         r[index].setAttribute('style', 'background-color:lightgreen');
       }
     }
