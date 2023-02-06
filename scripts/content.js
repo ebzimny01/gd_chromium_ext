@@ -1,108 +1,256 @@
-const url = getCurrentURL()
+let url = window.location.href;
 const recruiting_search_url = 'https://www.whatifsports.com/gd/recruiting/Search.aspx';
-const rectuit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx';
+const recruit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx';
 const parser = new DOMParser();
+
+// Get array of all schools
 const schools = get_school_data();
+
+// Determine the currently active teamId.
 const active_school_id = document.getElementById('pagetid')['value'];
-const id_search_pattern = `javascript:OpenTeamProfile(${active_school_id},0)`;
-// const re = new RegExp('javascript:OpenTeamProfile\(\d{5},0\);');
 const world = schools[active_school_id]['world'];
 const division = schools[active_school_id]['division'];
+
+/** Formulate the URL prefix used by GDAnalyst to map a specific town witin a
+ * the active World and Division. 
+*/
 const map_url_prefix = `https://gdanalyst.herokuapp.com/world/${world}/${division}/town?town=`;
+
+// Get the parent element that we will observe for mutations/changes
+let parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); 
+
+/** First need to determine the page to act on.
+ * If it is the Recruiting Search page, then 
+ * need to different behavior depending on whether
+ * General View is used or Ratings View is used.
+ */
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
-  const gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
-  const rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
-  // First add map links for hometowns only for General View
+  // try to get correct div from General View
+  let gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); 
+  // try to get correct div from Rating View
+  let rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); 
+  
   if (gv) {
-    try {
-      // const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_cbResults');
-      const table_section = gv.getElementsByTagName('tbody');
-      let t = table_section[0];
-      let hometown_exists = false;
-      let h = 0;
-      // establishes the column number for 'Hometown' by searching 1st row
-      for (let c = 0; c < t.rows[0].cells.length; c++) {
-        if (t.rows[0].cells[c].textContent==="Hometown") {
-          h = c; 
-          console.log(`Hometown is column number ${h}`);
-          hometown_exists = true;
-        } else {
-          console.log('Could not find Hometown column number.');
-        }
-      }
-      if (hometown_exists){
-        // Parses all rows of recruit search table and adds GD link to hometown
-        for (let r = 1; r < t.rows.length; r++) {
-          let cell = t.rows[r].cells[h].innerHTML;
-          if (cell!="Hometown"){ // Skips over the table header rows
-            // console.log(cell);
-            let map_url_full = map_url_prefix + cell;
-            // console.log(map_url_full);
-            t.rows[r].cells[h].innerHTML = '';
-            let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
-            t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
-            // console.log(t.rows[r].cells[h].innerHTML);
-          }
-        }
-        console.log('Updated Hometowns with URL links.')
-      } else {
-        console.log('Hometown column does not exist.')
-      }
-    } catch (err) {
-      console.log(err);
-      console.log('Recruiting search page is empty so unable to add map URLs.')
-    }
+    console.debug('Found General View');
+    // call function that will update General View
+    updateGeneralView(gv);
+    
+  } else if (rv) {
+    console.debug('Found Rating View');
+    // call function that will update Ratings View
+    updateRatingsView(rv);
+    
+  } else {
+    console.debug('No view found');
   }
   
-  // Second, add background highlight when 'Considering' matches current team profile
-  let r = null;
-  if (gv) {
-    console.log('Found General View');
-    r = gv.querySelectorAll('tr'); // get all rows from table
-  } else if (rv) {
-    console.log('Found Rating View');
-    r = rv.querySelectorAll('tr'); // get all rows from table
-  } else {
-    console.log('No view found');
-  }
-  for (let index = 0; index < r.length; index++) {
-    if (r[index].innerHTML.includes(id_search_pattern)) {
-        console.log('TeamId found',active_school_id, `Row ${index}`);
-        if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
-          // battle shows yellow background
-          console.log('Recruiting battle', true,'Setting background to yellow')
-          r[index].setAttribute('style', 'background-color:yellow');
-        } else {
-          // no battle shows green
-          console.log('Recruiting battle', false, 'setting background to green')
-          r[index].setAttribute('style', 'background-color:lightgreen');
-        }
-    }};
-} else if (url.includes(rectuit_page_url)) {
+} else if (url.includes(recruit_page_url)) {
     // This section is for the Recruit Page
     try {
       const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_homeTown');
       let hometown = section.textContent;
-      console.log(`Recruit's hometown is ${hometown}`);
+      console.debug(`Recruit's hometown is ${hometown}`);
       let map_url_full = map_url_prefix + hometown;
       section.innerHTML = '';
       let html_to_insert = parser.parseFromString(`<a href="${map_url_full}" style="color: yellow" target="_blank">+${hometown}</a>`, "text/html");
       section.appendChild(html_to_insert.body.firstChild);
     } catch (err) {
-      console.log(err);
-      console.log('Error finding hometown on Recruit Page.')
+      console.debug(err);
+      console.debug('Error finding hometown on Recruit Page.')
     }
 } else {
-    console.log('Page is not recognized as having any Hometown information to update.')
+    console.debug('Page is not recognized as having any Hometown information to update.')
+}
+
+/** This function should be called to update the page when the General View is
+ * used on the Recruiting Search page. This function gets the table element
+ * first. It then determines which column contains the 'Hometown' data. This is
+ * necessary because the 'Hometown' column changes depending on the search
+ * criteria selected. It then calls a function to parse all the table rows
+ * and add map link for each hometown. It then calls a function to parse all the
+ * table rows to alter background color for certain rows. Finally, it calls a
+ * an 'observer' function to monitor the page for changes.
+ */
+function updateGeneralView(v) {
+  try {
+    const table_section = v.getElementsByTagName('tbody');
+    let t = table_section[0];
+    // Determine if hometown column exits and which col number
+    let hometown_exists = htowncol(t);
+    if (hometown_exists !== null){
+      // Parses all rows of recruit search table and adds GD link to hometown
+      addMapLinks(t, hometown_exists);
+      console.debug('Updated Hometowns with URL links.')
+      highlightRows(t);
+    } else {
+      console.debug('Hometown column does not exist.')
+    }
+  } catch (err) {
+    console.debug(err);
+    console.debug('Recruiting search page is empty so unable to add map URLs.')
+  }
+  // After updating page links, start observer to look for updates
+  createObserver(parentDiv, 'gv');
+}
+
+/** This function should be called to update the page when the Ratings View is 
+ * used on the Recruiting Search page. This function gets the table element
+ * first. There is no 'Hometown' in this view. It only calls a function to parse
+ * all table rows to alter the background color for certain rows. Finally, it
+ * calls an 'observer' to monitor the page for changes.
+ */
+function updateRatingsView(v) {
+  try {
+    const table_section = v.getElementsByTagName('tbody');
+    let t = table_section[0];
+    highlightRows(t);
+  } catch (err) {
+    console.debug(err);
+  }
+  // After updating page links, start observer to look for updates
+  createObserver(parentDiv, 'rv');
+}
+
+/** This 'observer' function is needed in order to monitor for mutations made to
+ * the DOM. Certain user actions taken on the page will result in a portion of
+ * the page getting 'refreshed'. Certain div is removed and added back without
+ * reloading the page which then clears the updates made by this extension. This
+ * 'observer' will detect a change was made and call the appropriate update
+ * function again. * 
+ */
+function createObserver(p, x) {
+  console.debug('Starting observer...');
+  console.debug(p);
+  
+  /* Use this for debugging observer
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.addedNodes.length) {
+        console.debug('Added', mutation.addedNodes[0])
+      }
+      if (mutation.removedNodes.length) {
+        console.debug('Removed', mutation.removedNodes[0])
+      }})});
+  */
+
+  const observer = new MutationObserver((mutationsList, observer) => {
+    for(const mutation of mutationsList) {
+        if (mutation.addedNodes.length) {
+            console.debug('Added', mutation.addedNodes[0])
+            if (x === 'gv') {
+
+              // get div from General View
+              let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral');
+              // disconnect observer so that the page can be updated
+              // otherwise, if don't disconnect, updating page will trigger endless loop
+              observer.disconnect(); 
+              console.debug('Observer disconnecting and updating General View...');
+              updateGeneralView(g);
+
+            } else if (x === 'rv') {
+              // get div from Rating View
+              let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings');
+              // disconnect observer so that the page can be updated
+              // otherwise, if don't disconnect, updating page will trigger endless loop
+              observer.disconnect();
+              console.debug('Observer disconnecting and updating Ratings View...');
+              updateRatingsView(r);
+            } else {
+              console.debug('Observer failed to find anything to update!');
+            }
+        } else {
+          console.debug('No mutation.addedNodes type found!')
+        }
+    }
+  });
+  
+  observer.observe(p, { 
+      attributes: true, 
+      childList: true, 
+      subtree: true }
+  );
+}
+
+/** Establishes the column number for 'Hometown' by searching 1st row of table.
+ * Returns null if hometown not found.
+ * Returns column # of hometown found.
+ */
+function htowncol (t) {
+  let h = null
+  for (let c = 0; c < t.rows[0].cells.length; c++) {
+    if (t.rows[0].cells[c].textContent==="Hometown") {
+      h = c; 
+      console.debug(`Hometown is column number ${h}`);
+    } else {
+      console.debug('Could not find Hometown column number.');
+    }
+  }
+  return h;
+}
+
+/** This function accepts the table passed to it as well as the column number
+ * that contains 'Hometown' data. The functions iterates through each table row
+ * (skipping the header row which is index 0). It then formulates a URL that
+ * points to GDAnalyst website town mapping feature, and then applies this URL
+ * as an HREF link to the hometown.
+ */
+function addMapLinks (t,h) {
+  for (let r = 1; r < t.rows.length; r++) {
+    let cell = t.rows[r].cells[h].innerHTML;
+    if (cell!="Hometown"){ // Skips over the table header rows
+      console.debug('Row:',r,'Hometown:',cell);
+      let map_url_full = map_url_prefix + cell;
+      console.debug('Map URL:',map_url_full);
+      t.rows[r].cells[h].innerHTML = '';
+      let html_to_insert = parser.parseFromString(`<a href="${map_url_full}"target="_blank">+${cell}</a>`, "text/html");
+      t.rows[r].cells[h].appendChild(html_to_insert.body.firstChild).setAttribute('style','background-color: transparent');
+      console.debug('Final HTML update:',t.rows[r].cells[h].innerHTML);
+    }
+  }
+}
+
+/** This function accepts the table passed to it as input. The function is doing
+ * two things. It is find all rows (recruits) that are being 'watched' and
+ * highlights the backgroun of this row 'BLUE'. It then searches each table row
+ * for the teamId. If it finds the teamId, this means the recruit is considering
+ * signing with this team. It then determines if the recruit is considering this
+ * teamId alone or is considering this teamId along with other schools. If 
+ * 'alone' then it changes background color to 'GREEN'. If 'others' then it
+ * changes backgroun color to 'YELLOW'.
+ */
+function highlightRows (t) {
+  const id_search_pattern = `javascript:OpenTeamProfile(${active_school_id},0)`;
+  const r = t.querySelectorAll('tr'); // get all rows from table
+  for (let index = 0; index < r.length; index++) {
+    // If recruit is being Watched then highlight background color light blue
+    if (r[index].getElementsByClassName('ContactedRecruit').length !== 0) {
+      console.debug(`Row ${index} is a Watched Recruit`);
+      r[index].setAttribute('style', 'background-color:lightblue');
+    };
+    // Find recruit rows that have the current school Id in considering field
+    // If considering school + other schooles then highlight yellow
+    // If consider school alone then highlight light green
+    if (r[index].innerHTML.includes(id_search_pattern)) {
+      console.debug('TeamId found',active_school_id, `Row ${index}`);
+      if (r[index].querySelectorAll("a[href^='javascript:OpenTeamProfile(']").length !== 1) {
+        // battle shows yellow background
+        console.debug('Recruiting battle', true,'Setting background to yellow')
+        r[index].setAttribute('style', 'background-color:yellow');
+      } else {
+        // no battle shows green
+        console.debug('Recruiting battle', false, 'setting background to green')
+        r[index].setAttribute('style', 'background-color:lightgreen');
+      }
+    }
+  };
 }
 
 
-function getCurrentURL () {
-  return window.location.href
-}
-
-
+/** This function contains the JSON data array for every school in WhatIfSports
+ * Gridiron Dynasty. It is indexed by the teamId. The teamId is used to find the
+ * correct world and division.
+*/
 function get_school_data() {
   const a = {
     "49048": {
