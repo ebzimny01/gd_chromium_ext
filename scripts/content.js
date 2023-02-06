@@ -8,9 +8,9 @@ const active_school_id = document.getElementById('pagetid')['value'];
 const world = schools[active_school_id]['world'];
 const division = schools[active_school_id]['division'];
 const map_url_prefix = `https://gdanalyst.herokuapp.com/world/${world}/${division}/town?town=`;
+let parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); // get the parent element that we will observe for changes
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
-  let parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main_apIcons__'); // get the parent element that we will observe for changes
   let gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); // get table from General View
   let rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); // get table from Rating View
   
