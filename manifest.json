@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "City Mapper for WIS Gridiron Dynasty",
-    "version": "0.0.1.2",
-    "description": "Add links to City, ST on Recruiting search page that will open map location within GDAnalyst",
+    "version": "0.0.2.0",
+    "description": "Add recruit hometown mapping links, recruit considering color, box score analysis links",
     "browser_specific_settings": {
       "gecko": {
         "id": "{0bf3fa8d-30fc-479d-a0e0-798515f70ce7}",
@@ -19,6 +19,10 @@
         {
           "js": ["scripts/content.js"],
           "matches": ["https://www.whatifsports.com/gd/recruiting/Search.aspx", "https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx*"]
+        },
+        {
+          "js": ["scripts/box-score-analysis.js"],
+          "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*"]
         }
       ]
   }
