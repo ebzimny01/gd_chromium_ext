@@ -35,7 +35,9 @@ if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) 
         let newlink = document.createElement('a');
         newlink.setAttribute('href',boxscoreurl);
         newlink.setAttribute('target',"_blank");
-        let html_to_insert = parser.parseFromString(`<img src="images/plus-icon.png" height="16px" width="16px" style="vertical-align:middle; margin-right:3px"></img>`, "text/html");
+        let imagefile = 'images/plus-icon.png';
+        let imageurl = browser.runtime.getURL(imagefile);
+        let html_to_insert = parser.parseFromString(`<img src="${imageurl}" height="16px" width="16px" style="vertical-align:middle; margin-right:3px"></img>`, "text/html");
         newlink.appendChild(html_to_insert.body.firstChild);
         element.insertAdjacentElement("beforebegin", newlink);
     })

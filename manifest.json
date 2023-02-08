@@ -24,5 +24,8 @@
           "js": ["scripts/box-score-analysis.js"],
           "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*"]
         }
-      ]
+      ],
+      "web_accessible_resources" : [
+        "images/pluc-icon.png"
+     ]
   }
