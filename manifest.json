@@ -26,6 +26,9 @@
         }
       ],
       "web_accessible_resources" : [
-        "images/pluc-icon.png"
+        {
+          "resources": ["images/plus-icon.png"],
+          "matches": ["https://www.whatifsports.com/*"]
+        }
      ]
   }
