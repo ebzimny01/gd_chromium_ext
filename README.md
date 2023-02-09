@@ -16,6 +16,8 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 1. Do a "Recruiting Search" on WIS GD.
 2. The recruits' hometowns should be modified with a + sign in front and have a hyperlink.
 3. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division.
+4. On your team's schedule page, you can click the Link to GDAnalyst Page to open GDAnalyst game analyse/schedule page for your team.
+5. On your team's schedule page, next to each box score is a green + icon. Click it and GDAnalyst website will analyze the box score for you.
 
 ## Release Notes
 ### v0.0.2.0
