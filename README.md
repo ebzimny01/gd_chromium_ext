@@ -18,6 +18,12 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 3. Click on each hometown link and it will open a new tab and map the recruits location relative to human coaches in your world and division.
 
 ## Release Notes
+### v0.0.2.0
+1. In the active team's schedule page, as well as the team's profile schedule tab, the extension will insert a link to the active team's schedule/game analysis page on GDAnalyst website.
+2. Next to each boxscore link, the extension will insert a small green plus icon that is hyperlinked to GDAnalyst game analysis. Clicking the green plus icon will open GDAnalyst in a new tab and analyze the boxscore.
+
+     ![](https://github.com/ebzimny01/gd_chromium_ext/blob/master/wiki/teamschedule.jpg)
+
 ### v0.0.1.2
 1. Resolves an issue where the page updates made by the extension may disappear if certain actions are taken on the page (e.g. clicking check box to add a recruit to your watchlist or changing some of the search filter options at the top).
 2. Restructured the code into multiple functions.
