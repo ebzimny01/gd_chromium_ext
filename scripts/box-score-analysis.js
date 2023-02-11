@@ -11,12 +11,22 @@ const teamId_schedule_page = 'https://www.whatifsports.com/gd/TeamProfile/Schedu
 const teamId_gamelog_page = 'https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=';
 // Get the active teamId
 const active_school_id = document.getElementById('pagetid')['value'];
-const gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${active_school_id}/schedule`;
+let gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${active_school_id}/schedule`;
 const parser = new DOMParser();
 
 // Regular team schedule page or team profile schedule tab
 // Want to insert link to this team's game analysis page on GDAnalyst
 if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) {
+    if (url.startsWith(teamId_schedule_page)) {
+        /** For any team profile page that is opened, need to get the teamId.
+         * Grabs the correct 'div' and then child 'a' while using a regex
+         * to find the 5-digit teamId within the 'href' attribute.
+         */
+        const d0 = document.getElementsByClassName('teamInfoSec');
+        const regex = /OpenTeamProfile\((\d{5})/;
+        const tid = d0[0].getElementsByTagName('a')[0].getAttribute('href').match(regex)[1];
+        gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${tid}/schedule`;
+    }
     const d1 = document.getElementsByClassName('TeamScheduleCtl');
     const d2 = d1[0].getElementsByClassName('ContentBoxHeader');
     const newDiv = document.createElement('div');
