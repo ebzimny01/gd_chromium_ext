@@ -5,3 +5,4 @@ scripts/.prettierrc
 .vscode/launch.json
 manifest.zip
 >>>>>>> af456092d0f0d2711324c6e247c641ad6316f661
+.vscode/.prettierrc
