@@ -10,13 +10,12 @@ const main_schedule_page = 'https://www.whatifsports.com/gd/schedule';
 const teamId_schedule_page = 'https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=';
 const teamId_gamelog_page = 'https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=';
 // Get the active teamId
-const active_school_id = document.getElementById('pagetid')['value'];
-let gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${active_school_id}/schedule`;
 const parser = new DOMParser();
 
 // Regular team schedule page or team profile schedule tab
 // Want to insert link to this team's game analysis page on GDAnalyst
 if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) {
+    let gdanalyst_team_schedule_page = '';
     if (url.startsWith(teamId_schedule_page)) {
         /** For any team profile page that is opened, need to get the teamId.
          * Grabs the correct 'div' and then child 'a' while using a regex
@@ -26,7 +25,12 @@ if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) 
         const regex = /OpenTeamProfile\((\d{5})/;
         const tid = d0[0].getElementsByTagName('a')[0].getAttribute('href').match(regex)[1];
         gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${tid}/schedule`;
+    };
+    if (url.startsWith(main_schedule_page)) {
+        const active_school_id = document.getElementById('pagetid')['value'];
+        gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${active_school_id}/schedule`;
     }
+
     const d1 = document.getElementsByClassName('TeamScheduleCtl');
     const d2 = d1[0].getElementsByClassName('ContentBoxHeader');
     const newDiv = document.createElement('div');
