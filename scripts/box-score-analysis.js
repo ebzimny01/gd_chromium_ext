@@ -42,7 +42,7 @@ if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) 
     // gets all cells with box score link
     let r = d1[0].querySelectorAll("a.boxscoreLink");
     // regex that finds each boxscore ID
-    let regex = /OpenBoxscore\((\d{7})\)/;
+    let regex = /OpenBoxscore\((\d{7,8})\)/;
 
     /** Iterates through each row element to add plus icon and box score analysis
      * analysis URL in front of each box score link.
