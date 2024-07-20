@@ -17,17 +17,21 @@
     },
     "content_scripts": [
         {
-          "js": ["scripts/content.js"],
+          "js": ["scripts/common.js","scripts/content.js"],
           "matches": ["https://www.whatifsports.com/gd/recruiting/Search.aspx", "https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx*"]
         },
         {
-          "js": ["scripts/box-score-analysis.js"],
-          "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*"]
+          "js": ["scripts/common.js", "scripts/header-link-insertion.js"],
+          "matches": ["https://www.whatifsports.com/gd/*"]
+        },
+        {
+          "js": ["scripts/common.js", "scripts/box-score-analysis.js"],
+          "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*", "https://www.whatifsports.com/gd/Office/Default.aspx", "https://www.whatifsports.com/gd/office/", "https://www.whatifsports.com/gd/Coaching/*GamePlans.aspx"]
         }
       ],
       "web_accessible_resources" : [
         {
-          "resources": ["images/plus-icon.png"],
+          "resources": ["images/plus-icon.png", "data/schools.json"],
           "matches": ["https://www.whatifsports.com/*"]
         }
      ]
