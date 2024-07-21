@@ -3,7 +3,7 @@ The goal for this script is to insert GD Analyst and Guess links into the header
 of each GD page next to the coach name.
 */
 
-if (url.startsWith(general_gd_page)) {
+if (url.startsWith(general_gd_page) && !url.includes('RecruitProfile')) {
     console.log('Found General GD page. Trying to insert GD Analyst and Guess links. . .');
     const active_tid = getActiveTeamId();
     if (active_tid !== null) {
