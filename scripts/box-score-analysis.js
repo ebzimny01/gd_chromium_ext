@@ -5,8 +5,6 @@
  * 4. Do 1 and 2 for team profile page schedule tab.
  */
 
-
-
 const active_tid = getActiveTeamId();
 
 // Regular team schedule page or team profile schedule tab
@@ -52,23 +50,8 @@ if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) 
         let newlink = document.createElement('a');
         newlink.setAttribute('href',boxscoreurl);
         newlink.setAttribute('target',"_blank");
-        let imagefile = 'images/plus-icon.png';
-        let imageurl = chrome.runtime.getURL(imagefile);
         let html_to_insert = parser.parseFromString(`<img src="${imageurl}" height="12px" width="12px" style="vertical-align:middle; margin-right:3px"></img>`, "text/html");
         newlink.appendChild(html_to_insert.body.firstChild);
         element.insertAdjacentElement("beforebegin", newlink);
     })
 };
-
-// Main Office Page - Insert GD Analyst links.
-// Insert a link to the current team's GD Analyst Games Results page, similar 
-// to what is done on the main schedule page. Also insert a link to the the
-// current team's Guess page for the current season.
-
-// For the previous game, insert a link to the GD Analyst page next to the 
-// WISCast link. Also, insert a link to the opponent's GD Analyst Game Results
-// page. Also, insert a link to the opponent's Guess page for the current season.
-
-// For the current game, insert a link to the GD Analyst page next to the
-// Box Score link. Also, insert a link to each team's Game Results page.
-// Also, insert a link to each team's Guess page for the current season.
