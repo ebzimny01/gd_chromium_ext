@@ -25,7 +25,7 @@ async function insertHyperlinks(active_tid) { // Ensure this function is marked 
         // I want to insert a new <p> element after the 3rd child <p> element.
         const newP = document.createElement('p');
         newP.setAttribute('style', 'text-align:center');
-        let html_to_insert = parser.parseFromString(`<a href="${gdanalyst_team_schedule_page}" target="_blank" style="color:blue">GDAnalyst</a>`, "text/html");
+        let html_to_insert = parser.parseFromString(`<a href="${gdanalyst_team_schedule_page}" title="GDAnalyst Schedule Page" target="_blank" style="color:blue">GDAnalyst</a>`, "text/html");
         newP.appendChild(html_to_insert.body.firstChild);
         teamInfoBar[0].insertAdjacentElement('beforeend', newP);
         const newP2 = document.createElement('p');
@@ -35,7 +35,7 @@ async function insertHyperlinks(active_tid) { // Ensure this function is marked 
         console.log('g_page:', g_page);
 
         console.log('Guess URL:', g_page);
-        html_to_insert = parser.parseFromString(`<a href="${g_page}" target="_blank" style="color:blue">GUESS</a>`, "text/html");
+        html_to_insert = parser.parseFromString(`<a href="${g_page}" title="GUESS Page"target="_blank" style="color:blue">GUESS</a>`, "text/html");
         newP2.appendChild(html_to_insert.body.firstChild);
         teamInfoBar[0].insertAdjacentElement('beforeend', newP2);
         
