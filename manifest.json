@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Helper Extension for Gridiron Dynasty",
-    "version": "0.0.2.3",
+    "version": "0.0.2.4",
     "description": "Add recruit hometown mapping links, recruit considering color, box score analysis links",
     "browser_specific_settings": {
       "gecko": {
@@ -18,15 +18,15 @@
     "content_scripts": [
         {
           "js": ["scripts/common.js","scripts/content.js"],
-          "matches": ["https://www.whatifsports.com/gd/recruiting/Search.aspx", "https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx*"]
+          "matches": ["https://www.whatifsports.com/gd/recruiting/Search.aspx", "https://www.whatifsports.com/gd/RecruitProfile/*"]
         },
         {
           "js": ["scripts/common.js", "scripts/header-link-insertion.js"],
           "matches": ["https://www.whatifsports.com/gd/*"]
         },
         {
-          "js": ["scripts/common.js", "scripts/box-score-analysis.js"],
-          "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*", "https://www.whatifsports.com/gd/Office/Default.aspx", "https://www.whatifsports.com/gd/office/", "https://www.whatifsports.com/gd/Coaching/*GamePlans.aspx"]
+          "js": ["scripts/common.js", "scripts/box-score-analysis.js", "scripts/main-page.js"],
+          "matches": ["https://www.whatifsports.com/gd/schedule/", "https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=*", "https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=*", "https://www.whatifsports.com/gd/Office/Default.aspx", "https://www.whatifsports.com/gd/office/*", "https://www.whatifsports.com/gd/Coaching/*GamePlans.aspx"]
         }
       ],
       "web_accessible_resources" : [
