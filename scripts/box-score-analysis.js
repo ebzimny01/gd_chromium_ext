@@ -5,30 +5,24 @@
  * 4. Do 1 and 2 for team profile page schedule tab.
  */
 
-let url = window.location.href;
-const main_schedule_page = 'https://www.whatifsports.com/gd/schedule';
-const teamId_schedule_page = 'https://www.whatifsports.com/gd/TeamProfile/Schedule.aspx?tid=';
-const teamId_gamelog_page = 'https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=';
-// Get the active teamId
-const parser = new DOMParser();
+const active_tid = getActiveTeamId();
 
 // Regular team schedule page or team profile schedule tab
 // Want to insert link to this team's game analysis page on GDAnalyst
 if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) {
+    console.log('Found Team Schedule page');
     let gdanalyst_team_schedule_page = '';
     if (url.startsWith(teamId_schedule_page)) {
         /** For any team profile page that is opened, need to get the teamId.
          * Grabs the correct 'div' and then child 'a' while using a regex
          * to find the 5-digit teamId within the 'href' attribute.
          */
-        const d0 = document.getElementsByClassName('teamInfoSec');
-        const regex = /OpenTeamProfile\((\d{5})/;
-        const tid = d0[0].getElementsByTagName('a')[0].getAttribute('href').match(regex)[1];
-        gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${tid}/schedule`;
+        const teamId = getActiveTeamId();
+        gdanalyst_team_schedule_page = getGDAnalystTeamSchedulePage(teamId);
     };
     if (url.startsWith(main_schedule_page)) {
-        const active_school_id = document.getElementById('pagetid')['value'];
-        gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${active_school_id}/schedule`;
+        const teamId = document.getElementById('pagetid')['value'];
+        gdanalyst_team_schedule_page = getGDAnalystTeamSchedulePage(teamId);
     }
 
     const d1 = document.getElementsByClassName('TeamScheduleCtl');
@@ -56,8 +50,6 @@ if (url.startsWith(main_schedule_page) || url.startsWith(teamId_schedule_page)) 
         let newlink = document.createElement('a');
         newlink.setAttribute('href',boxscoreurl);
         newlink.setAttribute('target',"_blank");
-        let imagefile = 'images/plus-icon.png';
-        let imageurl = chrome.runtime.getURL(imagefile);
         let html_to_insert = parser.parseFromString(`<img src="${imageurl}" height="12px" width="12px" style="vertical-align:middle; margin-right:3px"></img>`, "text/html");
         newlink.appendChild(html_to_insert.body.firstChild);
         element.insertAdjacentElement("beforebegin", newlink);

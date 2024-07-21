@@ -1,7 +1,7 @@
-let url = window.location.href;
+
 const recruiting_search_url = 'https://www.whatifsports.com/gd/recruiting/Search.aspx';
-const recruit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/Ratings.aspx';
-const parser = new DOMParser();
+const recruit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/';
+// const parser = new DOMParser();
 
 // Get array of all schools
 const schools = get_school_data();
@@ -24,10 +24,13 @@ let parentDiv = document.getElementById('Anthem_ctl00_ctl00_ctl00_Main_Main_Main
  * need to different behavior depending on whether
  * General View is used or Ratings View is used.
  */
+
+// console.log('URL:',url);
+
 if (url.includes(recruiting_search_url)) {
   // This section is for Recruiting Search page
   // try to get correct div from General View
-  let gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral'); 
+  let gv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral');
   // try to get correct div from Rating View
   let rv = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings'); 
   
@@ -45,8 +48,9 @@ if (url.includes(recruiting_search_url)) {
     console.debug('No view found');
   }
   
-} else if (url.includes(recruit_page_url)) {
+} else if (url.startsWith(recruit_page_url)) {
     // This section is for the Recruit Page
+    console.debug('Found a Recruit Profile Page');
     try {
       const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_homeTown');
       let hometown = section.textContent;
