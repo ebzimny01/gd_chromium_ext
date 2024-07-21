@@ -6,7 +6,7 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 
 ## How To Install
 ### Firefox (v109 or newer)
-1. Install the extension from the Firefox Add-on site [here](https://addons.mozilla.org/en-US/firefox/addon/wis-gridiron-dynasty-mapper/).
+1. Install the extension from the Firefox Add-on site [here](https://addons.mozilla.org/en-US/firefox/addon/wis-gridiron-dynasty-helper/).
 2. By default it will only run when you click the Extension Icon. You can change the extension to "Always Allow on Whatifsports.com", and it will then work automatically.
 
 ### Chromium Extension (Google Chrome and Microsoft Edge)
