@@ -1,4 +1,10 @@
+// This script is a common utility script that can be used across multiple scripts.
+// As long as the other scripts are loaded after this script, they can use the
+// functions and variables defined here.
+
 let url = window.location.href;
+const imagefile = 'images/plus-icon.png';
+const imageurl = chrome.runtime.getURL(imagefile);
 
 const general_gd_page = 'https://www.whatifsports.com/gd/';
 const main_schedule_page = 'https://www.whatifsports.com/gd/schedule';
@@ -6,6 +12,7 @@ const teamId_schedule_page = 'https://www.whatifsports.com/gd/TeamProfile/Schedu
 const teamId_gamelog_page = 'https://www.whatifsports.com/gd/TeamProfile/GameLog.aspx?tid=';
 const main_office_page = 'https://www.whatifsports.com/gd/office/';
 const main_office_default_page = 'https://www.whatifsports.com/gd/Office/Default.aspx';
+const main_office_default_page_lower = 'https://www.whatifsports.com/gd/office/default.aspx';
 const gameplan_offense_page = 'https://www.whatifsports.com/gd/Coaching/OGamePlans.aspx';
 const gameplan_defense_page = 'https://www.whatifsports.com/gd/Coaching/DGamePlans.aspx';
 const gameplan_specialteams_page = 'https://www.whatifsports.com/gd/Coaching/SGamePlans.aspx';
