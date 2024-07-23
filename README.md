@@ -1,4 +1,4 @@
-# City Mapper for WIS Gridiron Dynasty (Chrome Extension)
+# GD Helper for WIS Gridiron Dynasty (Browser Extension)
 Chrome Extension for mapping recruit hometowns using GDAnalyst website
 
 ## Description
