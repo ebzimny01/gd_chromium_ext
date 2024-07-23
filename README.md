@@ -23,6 +23,10 @@ This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS
 8. On your team's main page, underneath the Current Game section, there are links to GUESS and GDAnalyst Schedule page for the Home and Away teams. At half-time of the current game, there will also be an "Analuyze Box Score" link.
 
 ## Release Notes
+### v1.0.0.1
+1. Fixed issue where the links stopped getting inserted after the new upcoming is shown on main office page.
+2. Added GDAnalyst schedule link and GUESS link for the previous opponent.
+   
 ### v1.0.0.0
 1. Added links to GDAnalyst Schedule Page and GUESS page for the Active Team in the upper right corner. 
 2. Added GDAnalyst Analyze link for the previous game's box score.
