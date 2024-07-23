@@ -2,7 +2,11 @@
 Chrome Extension for mapping recruit hometowns using GDAnalyst website
 
 ## Description
-This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS). When you search for recruits, the web page displays the recruits hometown (City, ST). This extension modifies the hometown to be a URL that opens the GDAnalyst website (gdanalyst.herokuapp.com) and leverages its mapping capability to show you where the recruit is located compared to all human coaches in that world and division.
+This extension is for coaches who play Gridiron Dynasty on Whatifsports.com (WIS).
+
+When you search for recruits, the web page displays the recruits hometown (City, ST). This extension modifies the hometown to be a URL that opens the GDAnalyst website (gdanalyst.herokuapp.com) and leverages its mapping capability to show you where the recruit is located compared to all human coaches in that world and division.
+
+The extension also inserts links to the respective GDAnalyst schedule page and GUESS page for the currently active team, the previouos game's opponent, and the current game's home/away teams. And it also adds an "Analyze" link to the current and previouos games which will analyze the box score using GDAnalyst game analyzer.
 
 ## How To Install
 ### Firefox (v109 or newer)
