@@ -184,7 +184,7 @@ async function insertLinksPreviousGame(active_tid, season) { // Ensure this func
         // Find the previous opponent's team ID.
         const opp_tid = document
             .getElementById('ctl00_ctl00_ctl00_Main_Main_Main_LastGame_contentBox')
-            .getElementsByClassName('teamProfileLink')[1]
+            .querySelector('a.teamProfileLink')
             .getAttribute('href')
             .match(/OpenTeamProfile\((\d{5})/)[1];
         if (!opp_tid) {
