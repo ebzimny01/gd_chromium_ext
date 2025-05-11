@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Helper Extension for Gridiron Dynasty",
-    "version": "2.0.1",
+    "version": "2.0.0.1",
     "description": "Add recruit hometown mapping links, recruit considering color, box score analysis links",
     "browser_specific_settings": {
       "gecko": {

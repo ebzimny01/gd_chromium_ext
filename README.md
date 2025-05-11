@@ -27,7 +27,7 @@ The extension also inserts links to the respective Next Guess page for the curre
 8. On your team's main page, underneath the Current Game section, there are links to GUESS and GDAnalyst Schedule page for the Home and Away teams. At half-time of the current game, there will also be an "Analuyze Box Score" link.
 
 ## Release Notes
-### v2.0.1
+### v2.0.0.1
 1. Fixed missing box score analysis link.
 
 ### v2.0.0.0
