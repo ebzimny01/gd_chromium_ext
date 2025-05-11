@@ -142,6 +142,9 @@ async function insertLinksCurrentGame(active_tid, season) { // Ensure this funct
                                 </a>
                             </td>
                             <td style="width: 33.33%;">
+                                ${boxscoreStructure}
+                            </td>
+                            <td style="width: 33.33%;">
                                 <a href="${home_guess_page}" target="_blank" title="GUESS page for ${home_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
                                     ${home_team_name} GUESS
                                 </a>
