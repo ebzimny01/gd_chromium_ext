@@ -84,15 +84,15 @@ async function insertLinksCurrentGame(active_tid, season) { // Ensure this funct
             }
 
             // Active team GD Analyst team schedule page
-            const gdanalyst_active_team_schedule_page = getGDAnalystTeamSchedulePage(active_tid);
-            const boxscoreurl = `${gdanalyst_active_team_schedule_page}/all?gameids=${bs_id}`;
+            const gdanalyst_active_team_schedule_page = await getGDAnalystTeamSchedulePage(active_tid);
+            const boxscoreurl = `https://www.thenextguess.com/gdanalyst/pbp?gameid=${bs_id}`;
 
             // Current Game away GD Analyst team schedule page and Guess page
             let gdanalyst_away_team_schedule_page = "";
             if (away_tid === active_tid) {
                 gdanalyst_away_team_schedule_page = gdanalyst_active_team_schedule_page;
             } else {
-                gdanalyst_away_team_schedule_page = getGDAnalystTeamSchedulePage(away_tid);
+                gdanalyst_away_team_schedule_page = await getGDAnalystTeamSchedulePage(away_tid);
             }
 
             const away_guess_page = await buildGuessPageUrl(away_tid, season);
@@ -108,7 +108,7 @@ async function insertLinksCurrentGame(active_tid, season) { // Ensure this funct
             if (home_tid === active_tid) {
                 gdanalyst_home_team_schedule_page = gdanalyst_active_team_schedule_page;
             } else {
-                gdanalyst_home_team_schedule_page = getGDAnalystTeamSchedulePage(home_tid);
+                gdanalyst_home_team_schedule_page = await getGDAnalystTeamSchedulePage(home_tid);
             }
             
             const home_guess_page = await buildGuessPageUrl(home_tid, season);
@@ -135,21 +135,6 @@ async function insertLinksCurrentGame(active_tid, season) { // Ensure this funct
             const newNextGameTableStructure = `
                 <table style="width: 100%; table-layout: fixed; border: 2px solid red; background: white">
                     <tbody>
-                        <tr>
-                            <td style="width: 33.33%;">
-                                <a href="${gdanalyst_away_team_schedule_page}" target="_blank" title="GDAnalyst Schedule Page for ${away_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
-                                    ${away_team_name} GDAnalyst
-                                </a>
-                            </td>
-                            <td style="width: 33.33%;" rowspan="2">
-                                ${boxscoreStructure}
-                            </td>
-                            <td style="width: 33.33%;">
-                                <a href="${gdanalyst_home_team_schedule_page}" target="_blank" title="GDAnalyst Schedule Page for ${home_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
-                                    ${home_team_name} GDAnalyst
-                                </a>
-                            </td>
-                        </tr>
                         <tr>
                             <td style="width: 33.33%;">
                                 <a href="${away_guess_page}" target="_blank" title="GUESS page for ${away_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
@@ -214,8 +199,8 @@ async function insertLinksPreviousGame(active_tid, season) { // Ensure this func
             .getElementsByClassName('wisCastRow')[0]
             .setAttribute('colSpan', '1'); // Change the colSpan attribute to 1
         
-        const gdanalyst_team_schedule_page = getGDAnalystTeamSchedulePage(active_tid);
-        const boxscoreurl = `${gdanalyst_team_schedule_page}/all?gameids=${bs_id}`;
+        const gdanalyst_team_schedule_page = await getGDAnalystTeamSchedulePage(active_tid);
+        const boxscoreurl = `https://www.thenextguess.com/gdanalyst/pbp?gameid=${bs_id}`;
 
         // Create a new <td> element after the WISCast section
         const newTd = document.createElement('td');
@@ -260,7 +245,7 @@ async function insertLinksPreviousGame(active_tid, season) { // Ensure this func
             .getAttribute('href')
             .match(/OpenTeamProfile\((\d{5})/)[1];
 
-        const gdanalyst_opp_team_schedule_page = getGDAnalystTeamSchedulePage(prior_opp_tid);
+        const gdanalyst_opp_team_schedule_page = await getGDAnalystTeamSchedulePage(prior_opp_tid);
         const opp_guess_page = await buildGuessPageUrl(prior_opp_tid, season);
 
         const newStructure = `
@@ -268,13 +253,6 @@ async function insertLinksPreviousGame(active_tid, season) { // Ensure this func
                 <div class="lastGame">
                     <table style="width: 100%; table-layout: fixed; margin-top: 5px; border: 2px solid red; background: white">
                         <tbody>
-                            <tr>
-                                <td>
-                                    <a href="${gdanalyst_opp_team_schedule_page}" target="_blank" title="GDAnalyst Schedule Page for ${prior_opp_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
-                                            ${prior_opp_team_name} GDAnalyst
-                                    </a>
-                                </td>
-                            </tr>
                             <tr>
                                 <td>
                                     <a href="${opp_guess_page}" target="_blank" title="GUESS page for ${prior_opp_team_name}" style="color:blue; display:flex; align-items:center; justify-content:center;">
