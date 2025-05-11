@@ -27,7 +27,7 @@ async function buildGuessPageUrl(active_tid, season) {
       const world = school_data['world'];
       const world_upper = world.toUpperCase();
       const division = school_data['division'];
-      const guess_page = `https://thenextguess.com/${world_upper}/${season}/${division}/team/${active_tid}`;
+      const guess_page = `https://www.thenextguess.com/gdanalyst/${world_upper}/${division}/${active_tid}`; // Example: https://www.thenextguess.com/gdanalyst/WARNER/D-IA/52812
       console.log('Guess Page: ', guess_page);
       return guess_page;
     } catch (error) {
@@ -96,23 +96,11 @@ function getActiveTeamId() {
 };
 
 
-function getGDAnalystTeamSchedulePage(tid) {
-    const gdanalyst_team_schedule_page = `https://gdanalyst.herokuapp.com/${tid}/schedule`;
-    console.log('GD Analyst Team Schedule Page: ', gdanalyst_team_schedule_page);
+async function getGDAnalystTeamSchedulePage(tid) {
+    const school_data = await fetchSchoolsAndLookup(tid);
+    const world = school_data['world'];
+    const division = school_data['division'];
+    const gdanalyst_team_schedule_page = `https://www.thenextguess.com/gdanalyst/${world}/${division}/${tid}?tab=gameresults`; // Example: https://www.thenextguess.com/gdanalyst/WARNER/D-IA/52812?tab=gameresults
+    console.log('Guess GDAnalyst Team Schedule Page: ', gdanalyst_team_schedule_page);
     return gdanalyst_team_schedule_page;
 }
-
-// Build the GUESS page URL.
-async function buildGuessPageUrl(active_tid, season) {
-    try {
-      const school_data = await fetchSchoolsAndLookup(active_tid);
-      const world = school_data['world'];
-      const world_upper = world.toUpperCase();
-      const division = school_data['division'];
-      const guess_page = `https://thenextguess.com/${world_upper}/${season}/${division}/team/${active_tid}`;
-      console.log('Guess Page: ', guess_page);
-      return guess_page;
-    } catch (error) {
-      console.error('Error building the guess page URL:', error);
-    }
-  }

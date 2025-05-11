@@ -16,18 +16,18 @@ async function insertHyperlinks(active_tid) { // Ensure this function is marked 
         // Wait for getSeason to resolve
         const season = await getSeason(active_tid);
         // Create the GDAnalyst team schedule page URL.
-        const gdanalyst_team_schedule_page = getGDAnalystTeamSchedulePage(active_tid);
+        const gdanalyst_team_schedule_page = await getGDAnalystTeamSchedulePage(active_tid);
 
         // Get DOM class element teamInfoBar.
         const teamInfoBar = document.getElementsByClassName('teamInfoBar');
 
         // This DOM element contains 4 child <p> elements.
         // I want to insert a new <p> element after the 3rd child <p> element.
-        const newP = document.createElement('p');
-        newP.setAttribute('style', 'text-align:center');
-        let html_to_insert = parser.parseFromString(`<a href="${gdanalyst_team_schedule_page}" title="GDAnalyst Schedule Page" target="_blank" style="color:blue">GDAnalyst</a>`, "text/html");
-        newP.appendChild(html_to_insert.body.firstChild);
-        teamInfoBar[0].insertAdjacentElement('beforeend', newP);
+        //const newP = document.createElement('p');
+        //newP.setAttribute('style', 'text-align:center');
+        //let html_to_insert = parser.parseFromString(`<a href="${gdanalyst_team_schedule_page}" title="GDAnalyst Schedule Page" target="_blank" style="color:blue">GDAnalyst</a>`, "text/html");
+        //newP.appendChild(html_to_insert.body.firstChild);
+        //teamInfoBar[0].insertAdjacentElement('beforeend', newP);
         const newP2 = document.createElement('p');
         
         // Wait for buildGuessPageUrl to resolve
@@ -35,7 +35,7 @@ async function insertHyperlinks(active_tid) { // Ensure this function is marked 
         console.log('g_page:', g_page);
 
         console.log('Guess URL:', g_page);
-        html_to_insert = parser.parseFromString(`<a href="${g_page}" title="GUESS Page"target="_blank" style="color:blue">GUESS</a>`, "text/html");
+        html_to_insert = parser.parseFromString(`<a href="${g_page}" title="The Next Guess Page" target="_blank" style="color:blue; border: 1px solid red; padding: 2px;">The Next Guess</a>`, "text/html");
         newP2.appendChild(html_to_insert.body.firstChild);
         teamInfoBar[0].insertAdjacentElement('beforeend', newP2);
         
