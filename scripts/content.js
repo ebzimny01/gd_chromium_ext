@@ -81,7 +81,7 @@ function updateGeneralView(v, parentDiv, map_url_prefix, active_school_id) { // 
     console.debug('Recruiting search page is empty so unable to add map URLs.')
   }
   // After updating page links, start observer to look for updates
-  createObserver(parentDiv, 'gv');
+  createObserver(parentDiv, 'gv', map_url_prefix, active_school_id);
 }
 
 /** This function should be called to update the page when the Ratings View is 
@@ -109,7 +109,7 @@ function updateRatingsView(v, parentDiv) { // Accept parentDiv as a parameter
  * 'observer' will detect a change was made and call the appropriate update
  * function again. * 
  */
-function createObserver(p, x) {
+function createObserver(p, x, map_url_prefix, active_school_id) {
   console.debug('Starting observer...');
   console.debug(p);
   
@@ -125,41 +125,35 @@ function createObserver(p, x) {
   */
 
   const observer = new MutationObserver((mutationsList, observer) => {
-    for(const mutation of mutationsList) {
-        if (mutation.addedNodes.length) {
-            console.debug('Added', mutation.addedNodes[0])
-            if (x === 'gv') {
-
-              // get div from General View
-              let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral');
-              // disconnect observer so that the page can be updated
-              // otherwise, if don't disconnect, updating page will trigger endless loop
-              observer.disconnect(); 
-              console.debug('Observer disconnecting and updating General View...');
-              updateGeneralView(g);
-
-            } else if (x === 'rv') {
-              // get div from Rating View
-              let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings');
-              // disconnect observer so that the page can be updated
-              // otherwise, if don't disconnect, updating page will trigger endless loop
-              observer.disconnect();
-              console.debug('Observer disconnecting and updating Ratings View...');
-              updateRatingsView(r);
-            } else {
-              console.debug('Observer failed to find anything to update!');
-            }
-        } else {
-          console.debug('No mutation.addedNodes type found!')
+    for (const mutation of mutationsList) {
+      if (mutation.addedNodes.length) {
+        console.debug('Added', mutation.addedNodes[0]);
+        if (x === 'gv') {
+          // Get the updated General View div
+          let g = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divGeneral');
+          if (g) {
+            observer.disconnect(); // Disconnect to avoid infinite loops
+            console.debug('Observer disconnecting and updating General View...');
+            updateGeneralView(g, p, map_url_prefix, active_school_id); // Re-apply logic
+          }
+        } else if (x === 'rv') {
+          // Get the updated Ratings View div
+          let r = document.getElementById('ctl00_ctl00_ctl00_Main_Main_Main_divRatings');
+          if (r) {
+            observer.disconnect(); // Disconnect to avoid infinite loops
+            console.debug('Observer disconnecting and updating Ratings View...');
+            updateRatingsView(r, p);
+          }
         }
+      }
     }
   });
-  
-  observer.observe(p, { 
-      attributes: true, 
-      childList: true, 
-      subtree: true }
-  );
+
+  observer.observe(p, {
+    attributes: true,
+    childList: true,
+    subtree: true,
+  });
 }
 
 /** Establishes the column number for 'Hometown' by searching 1st row of table.
