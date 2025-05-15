@@ -40,7 +40,10 @@ const recruit_page_url = 'https://www.whatifsports.com/gd/RecruitProfile/';
             const section = document.getElementById('ctl00_ctl00_ctl00_Main_Main_homeTown');
             let hometown = section.textContent;
             console.debug(`Recruit's hometown is ${hometown}`);
-            let map_url_full = map_url_prefix + hometown;
+            // Remove the space between "city," and "ST" for the URL
+            let sanitizedCell = hometown.replace(/, /, ',');
+            let map_url_full = map_url_prefix + sanitizedCell;
+            console.debug('Map URL:', map_url_full);
             section.innerHTML = '';
             let html_to_insert = parser.parseFromString(`<a href="${map_url_full}" style="color: yellow" target="_blank">+${hometown}</a>`, "text/html");
             section.appendChild(html_to_insert.body.firstChild);
